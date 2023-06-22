@@ -21,8 +21,12 @@
             </intent-filter>
         </activity>
 
+<<<<<<< HEAD
         <activity android:name=".presactivity"></activity>
 
+=======
+<activity android:name=".RedefinirActivity"></activity>
+>>>>>>> b0d4214 (primeiro commit Thaina)
 
     </application>
 
