@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">LoginJE</string>
+    <string name="app_slogan">Only one world</string>
+    <string name="app_welcome">Pré 2</string>>
+    <string name="app_welcomee">Pré 3</string>>
+    <string name="app_welcomeee">Pré 1</string>>
+    <string name="text_inicio">Faça login e entre no seu jardim</string>
+    <string name="text_forgot_password"> Forgot password?</string>
+    <string name="text_sign_in">Sign in </string>
+    <string name="text_password">Password</string>
+    <string name="text_email_or_username">Email or username </string>
+    <string name="text_error_fill_mandatory_information">Mandatory information </string>
+//Tela inicial
+    <string name="name_tela">Inicial</string>
+    <string name="text_register">Cadastre-se</string>
+    <string name="text_name_student">Nome do aluno</string>
+    <string name="text_date_of_birth">Data de Nascimento</string>
+    <string name="text_responsible_person_email">E-mail do responsável</string>
+    <string name="text_school_grade">Série escolar</string>
+    <string name="text_conclude">Concluir</string>
+
+
+
+
+
+
+
+
+</resources>

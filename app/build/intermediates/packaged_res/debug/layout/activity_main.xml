@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="433dp"
+        android:layout_height="290dp"
+        android:src="@drawable/img"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="172dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_inicio"
+        android:textSize="38sp"
+        tools:ignore="MissingConstraints"
+         />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_cadastro"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/bg_button_normal"
+        android:letterSpacing="0.04"
+        android:text="@string/text_conclude"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/button_cadastro"
+        tools:layout_editor_absoluteX="125dp"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
