@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">LoginJE</string>
+    <string name="app_slogan">Não tem cadastro?</string>
+    <string name="app_redefinir">Redefinir sua senha</string>>
+    <string name="text_inicio">Faça login e entre no seu jardim</string>
+    <string name="text_forgot_password"> Forgot password?</string>
+    <string name="text_sign_in">Sign in </string>
+    <string name="text_password">Password</string>
+    <string name="text_email_or_username">Email or username </string>
+    <string name="text_error_fill_mandatory_information">Mandatory information</string>
+
+
+
+
+
+
+
+</resources>
