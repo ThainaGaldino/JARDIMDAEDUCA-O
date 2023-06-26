@@ -5,6 +5,7 @@
     <color name="dark_purple">#361D4E</color>
     <color name="green">#8FF483</color>
     <color name="lilas_500">#9c27b0</color>
+    <color name="purple">#AC8DCC</color>
     <color name="purple_200">#7e57c2</color>
     <color name="purple_500">#FFFGFGFG</color>
     <color name="purple_700">#7b1fa2</color>
@@ -12,7 +13,8 @@
     <color name="teal_700">#018786</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">LoginJE</string>
-    <string name="app_slogan">Only one world</string>
+    <string name="app_redefinir">Redefinir sua senha</string>
+    <string name="app_slogan">Não tem cadastro?</string>
     <string name="app_welcome">Pré 2</string>
     <string name="app_welcomee">Pré 3</string>
     <string name="app_welcomeee">Pré 1</string>

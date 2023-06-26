@@ -35,7 +35,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.loginje.presactivity" />
+        <activity android:name="com.example.loginje.RedefinirActivity" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
