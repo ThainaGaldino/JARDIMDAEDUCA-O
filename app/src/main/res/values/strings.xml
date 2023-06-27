@@ -18,4 +18,8 @@
     <string name="text_responsible_person_email">E-mail do responsável</string>
     <string name="text_school_grade">Série escolar</string>
     <string name="text_conclude">Concluir</string>
+    <string name="App_senhaNova">Senha Nova</string>
+    <string name="App_confirmarsenhaNova">Confirmar Senha Nova</string>
+    <string name="App_confirmar">Confirmar </string>
+
 </resources>
