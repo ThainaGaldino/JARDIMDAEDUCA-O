@@ -3033,7 +3033,6 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
-id TextView_slogan
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3118,6 +3117,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn_cadastrar
 id btn_forgot_password
 id btn_sign_in
 id buttonPanel

@@ -19,8 +19,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private EditText mEditextCredentials , mEdittextPassword ;
-    private TextView mButtonSignUp;
-    private Button mButtonSignIn  ;
+    private TextView mButtonSignUp, mButtonCadastro;
+    private Button mButtonSignIn;
 
 
     private boolean isRequired(){
@@ -96,12 +96,17 @@ public class MainActivity extends AppCompatActivity {
         mButtonSignUp = findViewById(R.id.btn_forgot_password);
         mButtonSignUp.setOnClickListener(new ClickButtonSiggnUp());
 
+        mButtonCadastro =findViewById(R.id.btn_cadastrar);
+        mButtonCadastro.setOnClickListener(new ClickButtonCadastrar());
+
     }
 
-    public static class ClickButtonConcluir implements View.OnClickListener {
+    public class ClickButtonCadastrar implements View.OnClickListener {
         @Override
         public void onClick(View view) {
-
+            //trocar de janela (tela de cadastro) //
+            Intent it= new Intent(MainActivity.this, Cadastro.class);
+            startActivity(it);
         }
     }
 }
