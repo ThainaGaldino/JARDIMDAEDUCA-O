@@ -5,16 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green">
+    android:background="@color/green"
+    tools:context=".Inicial">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_arvore"
         android:layout_width="269dp"
         android:layout_height="218dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="31dp"
         android:src="@drawable/arvore"
-        app:layout_constraintEnd_toStartOf="@+id/image_passaro"
+        app:layout_constraintEnd_toStartOf="@+id/button_cadastrar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,18 +22,16 @@
         android:id="@+id/image_passaro"
         android:layout_width="183dp"
         android:layout_height="141dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="5dp"
         android:src="@drawable/passaro"
+        app:layout_constraintBottom_toTopOf="@+id/textView_inicial"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_inicial"
-        app:layout_constraintTop_toBottomOf="@+id/image_arvore" />
+        app:layout_constraintStart_toEndOf="@+id/image_arvore" />
 
     <TextView
         android:id="@+id/textView_inicial"
         android:layout_width="372dp"
         android:layout_height="306dp"
-        android:text="@string/text_inicio"
+        android:text="@string/text_app"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="italic"
@@ -47,14 +45,29 @@
         android:layout_height="48dp"
         android:background="@drawable/button"
         android:letterSpacing="0.04"
-        android:text="@string/text_conclude"
+        android:text="@string/text_sign_in"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="625dp" />
+        tools:layout_editor_absoluteY="630dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_cadastrar"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_button_normal"
+        android:letterSpacing="0.04"
+        android:text="@string/app_cadastro"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="37dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,7 @@
     <string name="text_error_fill_mandatory_information">Mandatory information </string>
     <string name="name_tela">Inicial</string>
     <string name="text_register">Cadastre-se</string>
+    <string name="app_cadastro">Cadastrar</string>
     <string name="text_name_student">Nome do aluno</string>
     <string name="text_date_of_birth">Data de Nascimento</string>
     <string name="text_responsible_person_email">E-mail do responsável</string>
