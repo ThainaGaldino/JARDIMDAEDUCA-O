@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class cadastro extends AppCompatActivity {
+public class Cadastro extends AppCompatActivity {
 
     private TextView mTextViewserie, mTextViewcadastro;
     private EditText mEditTextdatadenascimento, mEditTextemaildoresponsavel, mEditTextnomealuno;
@@ -31,7 +31,7 @@ public class cadastro extends AppCompatActivity {
         mEditTextemaildoresponsavel = findViewById(R.id.editText_email_do_responsavel);
 
         mButtonconcluir = findViewById(R.id.button_concluir);
-        mButtonconcluir.setOnClickListener(new MainActivity.ClickButtonConcluir());
+        mButtonconcluir.setOnClickListener(new ClickButtonConcluir());
 
 
     }
@@ -51,13 +51,11 @@ public class cadastro extends AppCompatActivity {
     private void performNextActivity() {
         if (isRequired()) {
             Toast.makeText(this, "Mandatory information", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(cadastro.this, MainActivity.class));
+            startActivity(new Intent(Cadastro.this, MainActivity.class));
         }
     }
 
-    public class ClickButtonConcluir implements View
-
-            .OnClickListener {
+    public class ClickButtonConcluir implements View.OnClickListener {
         @Override
         public void onClick(View v) {
 

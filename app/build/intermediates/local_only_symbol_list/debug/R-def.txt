@@ -21,7 +21,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable img
 drawable panda_cadastro
-id TextView_slogan
+id btn_cadastrar
 id btn_forgot_password
 id btn_sign_in
 id button_concluir
