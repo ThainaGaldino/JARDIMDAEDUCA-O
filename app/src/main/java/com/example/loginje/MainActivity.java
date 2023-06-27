@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
    }
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonSignUp = findViewById(R.id.btn_forgot_password);
         mButtonSignUp.setOnClickListener(new ClickButtonSiggnUp());
 
-        mButtonCadastro =findViewById(R.id.btn_cadastrar);
+        mButtonCadastro =findViewById(R.id.btn_sign_in);
         mButtonCadastro.setOnClickListener(new ClickButtonCadastrar());
 
     }

@@ -2909,6 +2909,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable arvore
 drawable avd_hide_password
 drawable avd_show_password
 drawable bg_button_normal
@@ -2923,6 +2924,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable buttan
+drawable button
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3016,6 +3018,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable panda_cadastro
+drawable passaro
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3117,11 +3120,11 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id btn_cadastrar
 id btn_forgot_password
 id btn_sign_in
 id buttonPanel
 id button_concluir
+id button_entrar
 id cache_measures
 id callMeasure
 id cancel_button
@@ -3246,7 +3249,9 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id image_arvore
 id image_cadastro
+id image_passaro
 id immediateStop
 id included
 id indeterminate
@@ -3477,11 +3482,11 @@ id textStart
 id textTop
 id textView
 id textView_cadastro
+id textView_inicial
 id textView_serie
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
-id text_view_redefinir
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -3641,7 +3646,9 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_cadastro
+layout activity_inicial
 layout activity_main
+layout activity_pres
 layout activity_redefinir
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3723,6 +3730,9 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string App_confirmar
+string App_confirmarsenhaNova
+string App_senhaNova
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3888,6 +3898,7 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string text_app
 string text_conclude
 string text_date_of_birth
 string text_email_or_username
