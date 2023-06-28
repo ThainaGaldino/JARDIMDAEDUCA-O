@@ -16,7 +16,7 @@
 
         android:layout_width="427dp"
         android:layout_height="418dp"
-        android:src="@drawable/pre1Sapo"
+        android:src="@drawable/preumsapo"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-48dp"
         tools:layout_editor_absoluteY="351dp" />
