@@ -2925,12 +2925,14 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable buttan
 drawable button
+drawable button_cadastrar
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable green
+drawable hab1
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
@@ -3019,6 +3021,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable panda_cadastro
 drawable passaro
+drawable preumsapo
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3123,6 +3126,7 @@ id bounceStart
 id btn_forgot_password
 id btn_sign_in
 id buttonPanel
+id button_cadastrar
 id button_concluir
 id button_entrar
 id cache_measures
@@ -3646,6 +3650,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_cadastro
+layout activity_habilidade
 layout activity_inicial
 layout activity_main
 layout activity_pres
@@ -3761,6 +3766,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string androidx_startup
+string app_cadastro
 string app_name
 string app_redefinir
 string app_slogan

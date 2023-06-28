@@ -18,14 +18,18 @@ drawable bg_edit_normal
 drawable bg_layer_gradient
 drawable buttan
 drawable button
+drawable button_cadastrar
 drawable green
+drawable hab1
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable img
 drawable panda_cadastro
 drawable passaro
+drawable preumsapo
 id btn_forgot_password
 id btn_sign_in
+id button_cadastrar
 id button_concluir
 id button_entrar
 id editText_credentials
@@ -42,6 +46,7 @@ id textView_cadastro
 id textView_inicial
 id textView_serie
 layout activity_cadastro
+layout activity_habilidade
 layout activity_inicial
 layout activity_main
 layout activity_pres
@@ -51,6 +56,7 @@ mipmap ic_launcher_round
 string App_confirmar
 string App_confirmarsenhaNova
 string App_senhaNova
+string app_cadastro
 string app_name
 string app_redefinir
 string app_slogan
