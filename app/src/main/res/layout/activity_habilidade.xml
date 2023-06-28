@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="335dp"
+        android:layout_height="261dp"
+        android:src="@drawable/hab1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:layout_width="427dp"
+        android:layout_height="418dp"
+        android:src="@drawable/pre1Sapo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-48dp"
+        tools:layout_editor_absoluteY="351dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
