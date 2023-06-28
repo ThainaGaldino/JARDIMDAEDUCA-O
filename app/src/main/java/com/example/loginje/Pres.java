@@ -22,8 +22,5 @@ public class Pres  extends AppCompatActivity {
 
         Toast.makeText(this, "Realizando Cadastro", Toast.LENGTH_SHORT).show();
 
-        //trocar de janela (tela de pres) //
-        Intent it = new Intent(MainActivity.this, Pres.class);
-        startActivity(it);
-    }
-    }
+
+    }}

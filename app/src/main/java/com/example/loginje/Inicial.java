@@ -30,11 +30,13 @@ public class Inicial extends AppCompatActivity {
         mButtonentrar = findViewById(R.id.button_entrar);
         mButtonentrar.setOnClickListener(new ClickButtonEntrar());
 
-
-
-
         //responsável por iniciar ou executar a próxima atividade (activity) no fluxo de um aplicativo Android.
-
+        {
+            if (isRequired()) {
+                Toast.makeText(this, "Inicial", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Inicial.this, MainActivity.class));
+            }
+        }
         class ClickButtonCadastrar implements View.OnClickListener {
             @Override
             public void onClick(View v) {
