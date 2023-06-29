@@ -24,9 +24,12 @@ drawable hab1
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable img
+drawable macacopresss
 drawable panda_cadastro
 drawable passaro
+drawable porcopres
 drawable preumsapo
+drawable sapopresss
 id btn_forgot_password
 id btn_sign_in
 id button_cadastrar
