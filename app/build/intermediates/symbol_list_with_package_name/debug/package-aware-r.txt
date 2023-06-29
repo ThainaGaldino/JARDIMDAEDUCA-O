@@ -3108,6 +3108,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id appCompatImageView
 id arc
 id asConfigured
 id async
@@ -3126,6 +3127,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn_cadastro
 id btn_forgot_password
 id btn_sign_in
 id buttonPanel
