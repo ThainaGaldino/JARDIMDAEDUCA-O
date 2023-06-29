@@ -6,22 +6,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/green">
 
-    <androidx.appcompat.widget.AppCompatEditText
-
-        android:id="@+id/editText_credentials"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="@string/app_welcome"
-        android:inputType="text"
-        android:paddingStart="210dp"
-        android:paddingEnd="150dp"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:text="@string/app_welcome"
         android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="387dp"
-        tools:ignore="MissingConstraints" />
-
-
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
