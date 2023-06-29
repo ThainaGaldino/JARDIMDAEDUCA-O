@@ -30,6 +30,8 @@ drawable passaro
 drawable porcopres
 drawable preumsapo
 drawable sapopresss
+id appCompatImageView
+id btn_cadastro
 id btn_forgot_password
 id btn_sign_in
 id button_cadastrar
