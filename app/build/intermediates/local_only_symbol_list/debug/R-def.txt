@@ -31,6 +31,7 @@ drawable porcopres
 drawable preumsapo
 drawable sapopresss
 id appCompatImageView
+id appCompatImageView2
 id btn_cadastro
 id btn_forgot_password
 id btn_sign_in
@@ -50,6 +51,7 @@ id textView
 id textView_cadastro
 id textView_inicial
 id textView_serie
+id view
 layout activity_cadastro
 layout activity_habilidade
 layout activity_inicial
