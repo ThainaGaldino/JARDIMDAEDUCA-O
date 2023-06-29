@@ -23,7 +23,11 @@
 
         <activity android:name=".RedefinirActivity"></activity>
         <activity android:name=".Cadastro"></activity>
-        <activity android:name=".Inicial"></activity>
+        <activity android:name=".Pres"></activity>
+        <activity android:name=".Inicial"
+            android:priority="100">
+
+        </activity>
 
     </application>
 

@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,"trocar de janela",Toast.LENGTH_SHORT).show();
 
      //trocar de janela (tela de pres) //
-
+        Intent it= new Intent(MainActivity.this , Pres.class);
+        startActivity(it);
     }
     private void performNextActivity2 (){
 
