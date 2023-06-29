@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
         android:layout_width="433dp"
         android:layout_height="290dp"
         android:src="@drawable/img"
@@ -51,8 +52,6 @@
                 android:id="@+id/editText_credentials"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginEnd="18dp"
                 android:layout_marginBottom="36dp"
                 android:background="@drawable/bg_edit_normal"
                 android:hint="@string/text_email_or_username"
@@ -61,7 +60,10 @@
                 android:paddingEnd="18dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
-                app:layout_constraintBottom_toTopOf="@id/editText_password" />
+                app:layout_constraintBottom_toTopOf="@id/editText_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/editText_password"
@@ -92,7 +94,8 @@
                 android:textStyle="bold"
 
                 app:layout_constraintBottom_toTopOf="@+id/btn_forgot_password"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/btn_forgot_password"
@@ -103,7 +106,9 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                app:layout_constraintBottom_toBottomOf="parent" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -135,14 +140,16 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btn_cadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_slogan"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="391dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="404dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

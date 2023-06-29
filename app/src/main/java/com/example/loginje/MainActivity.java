@@ -22,6 +22,26 @@ public class MainActivity extends AppCompatActivity {
     private TextView mButtonSignUp, mButtonCadastro;
     private Button mButtonSignIn;
 
+    @SuppressLint("MissingInflatedId")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mEditextCredentials = findViewById(R.id.editText_credentials) ;
+        mEdittextPassword = findViewById(R.id.editText_password);
+        mEdittextPassword.setOnEditorActionListener(new EditTextAction());
+        mButtonSignIn = findViewById(R.id.btn_sign_in);
+        mButtonSignIn.setOnClickListener(new ClickButtonSiggnIn());
+
+        mButtonSignUp = findViewById(R.id.btn_forgot_password);
+        mButtonSignUp.setOnClickListener(new ClickButtonSiggnUp());
+
+        mButtonCadastro =findViewById(R.id.btn_cadastro);
+        mButtonCadastro.setOnClickListener(new ClickButtonCadastrar());
+
+    }
+
 
     private boolean isRequired(){
         if (TextUtils.isEmpty(mEditextCredentials.getText()) ||
@@ -47,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void performNextActivity2 (){
 
-        Toast.makeText(this,"Realizando Cadastro",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"Redefinir senha",Toast.LENGTH_SHORT).show();
 
         //trocar de janela (tela de pres) //
         Intent it= new Intent(MainActivity.this , RedefinirActivity.class);
@@ -83,25 +103,7 @@ public class MainActivity extends AppCompatActivity {
    }
 
 
-    @SuppressLint("MissingInflatedId")
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-        mEditextCredentials = findViewById(R.id.editText_credentials) ;
-        mEdittextPassword = findViewById(R.id.editText_password);
-        mEdittextPassword.setOnEditorActionListener(new EditTextAction());
-        mButtonSignIn = findViewById(R.id.btn_sign_in);
-        mButtonSignIn.setOnClickListener(new ClickButtonSiggnIn());
-
-        mButtonSignUp = findViewById(R.id.btn_forgot_password);
-        mButtonSignUp.setOnClickListener(new ClickButtonSiggnUp());
-
-        mButtonCadastro =findViewById(R.id.btn_sign_in);
-        mButtonCadastro.setOnClickListener(new ClickButtonCadastrar());
-
-    }
 
     public class ClickButtonCadastrar implements View.OnClickListener {
         @Override

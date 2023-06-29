@@ -2959,6 +2959,7 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
+drawable macacopresss
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3021,7 +3022,9 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable panda_cadastro
 drawable passaro
+drawable porcopres
 drawable preumsapo
+drawable sapopresss
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
