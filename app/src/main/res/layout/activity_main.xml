@@ -17,12 +17,13 @@
         tools:layout_editor_absoluteY="172dp" />
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/green"
         android:src="@drawable/green"
-        app:layout_constraintBottom_toBottomOf="parent"
 
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -30,13 +31,12 @@
 
 
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_layer_gradient"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="-102dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -70,10 +70,8 @@
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/editText_password"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginEnd="18dp"
+                android:layout_width="443dp"
+                android:layout_height="58dp"
                 android:layout_marginBottom="36dp"
                 android:background="@drawable/bg_edit_normal"
                 android:hint="@string/text_password"
@@ -81,7 +79,9 @@
                 android:paddingStart="18dp"
                 android:paddingEnd="18dp"
                 android:textColorHint="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/btn_sign_in" />
+                app:layout_constraintBottom_toTopOf="@+id/btn_sign_in"
+                tools:layout_editor_absoluteX="-14dp"
+                tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_sign_in"
@@ -133,28 +133,28 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="355dp"
-        android:layout_height="276dp"
-        android:layout_marginTop="64dp"
+        android:layout_width="322dp"
+        android:layout_height="244dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:src="@drawable/img"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView2"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/btn_cadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/app_slogan"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
