@@ -8,9 +8,10 @@
     <color name="purple_500">#FFFGFGFG</color>
     <color name="lilas_500">#9c27b0</color>
     <color name="purple_700">#7b1fa2</color>
-    <color name="teal_200">#03dac5</color>
+    <color name="teal_200">#F2FFF4</color>
     <color name="teal_700">#018786</color>
     <color name="purple_200">#7e57c2</color>
-    <color name="purple">#AC8DCC</color>
+    <color name="purple">#F44336</color>
+
 
 </resources>
