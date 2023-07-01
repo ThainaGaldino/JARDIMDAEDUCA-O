@@ -13,6 +13,8 @@
     <string name="text_error_fill_mandatory_information">Mandatory information </string>
     <string name="name_tela">Inicial</string>
     <string name="text_register">Cadastre-se</string>
+    <string name="text_assistir">Clique para assistir</string>
+    <string name="text_atividade">Iniciar atividade</string>
     <string name="app_cadastro">Cadastrar</string>
     <string name="text_button">Iniciar</string>
     <string name="text_bloqueado">Bloqueado</string>

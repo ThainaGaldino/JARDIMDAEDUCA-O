@@ -2,6 +2,7 @@
 <resources>
     <color name="bege">#FFE4C4</color>
     <color name="black">#FF000000</color>
+    <color name="lilas">#AC8DCC</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#8FF483</color>
     <color name="dark_purple">#361D4E</color>

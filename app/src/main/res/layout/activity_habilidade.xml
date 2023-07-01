@@ -3,9 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".Habilidade">
 
-    <androidx.appcompat.widget.AppCompatImageView
+
+<androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView4"
         android:layout_width="335dp"
         android:layout_height="261dp"
@@ -71,9 +73,11 @@
         android:textColor="@color/purple"
         android:textSize="13sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView4"
+        app:layout_constraintTop_toBottomOf="@+id/button_iiniciar"
+        app:layout_constraintVertical_bias="0.41"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="269dp" />
+        tools:layout_editor_absoluteX="265dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
