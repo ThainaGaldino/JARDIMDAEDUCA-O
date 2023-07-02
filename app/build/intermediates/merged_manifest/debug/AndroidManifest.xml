@@ -33,6 +33,7 @@
         <activity android:name="com.example.loginje.RedefinirActivity" />
         <activity android:name="com.example.loginje.Cadastro" />
         <activity android:name="com.example.loginje.Pres" />
+        <activity android:name="com.example.loginje.Habilidade" />
         <activity
             android:name="com.example.loginje.Inicial"
             android:exported="true"

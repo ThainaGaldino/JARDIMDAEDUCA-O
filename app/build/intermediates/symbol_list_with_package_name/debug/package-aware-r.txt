@@ -1400,6 +1400,7 @@ color foreground_material_light
 color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color lilas
 color lilas_500
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
@@ -2912,6 +2913,7 @@ drawable abc_vector_test
 drawable arvore
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_bloqueado
 drawable bg_button_normal
 drawable bg_edit_normal
 drawable bg_layer_gradient
@@ -2948,6 +2950,8 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable img
+drawable leao
+drawable logo
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -2960,6 +2964,7 @@ drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
 drawable macacopresss
+drawable margem
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2970,6 +2975,7 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable mato
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -3028,6 +3034,8 @@ drawable sapopresss
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable topo
+drawable video_corpo_humano
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3110,6 +3118,8 @@ id antiClockwise
 id anticipate
 id appCompatImageView
 id appCompatImageView2
+id appCompatImageView3
+id appCompatImageView4
 id arc
 id asConfigured
 id async
@@ -3132,9 +3142,12 @@ id btn_cadastro
 id btn_forgot_password
 id btn_sign_in
 id buttonPanel
+id button_bloqueado
 id button_cadastrar
 id button_concluir
 id button_entrar
+id button_iiniciar
+id button_iniciar_atividade
 id cache_measures
 id callMeasure
 id cancel_button
@@ -3491,6 +3504,7 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView_assistir
 id textView_cadastro
 id textView_inicial
 id textView_serie
@@ -3662,6 +3676,7 @@ layout activity_inicial
 layout activity_main
 layout activity_pres
 layout activity_redefinir
+layout activity_video
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3912,6 +3927,10 @@ string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
 string text_app
+string text_assistir
+string text_atividade
+string text_bloqueado
+string text_button
 string text_conclude
 string text_date_of_birth
 string text_email_or_username
