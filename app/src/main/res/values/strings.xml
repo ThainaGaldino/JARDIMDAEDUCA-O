@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">LoginJE</string>
-    <string name="app_welcome">Pré 2</string>>
-    <string name="app_welcomee">Pré 3</string>>
-    <string name="app_welcomeee">Pré 1</string>>
+    <string name="app_welcome">Pré 2, fornece as habilidades I, II, III</string>>
+    <string name="app_welcomee">Pré 3, fornece as habilidades I, II, III</string>>
+    <string name="app_welcomeee">Pré 1, fornece as habilidades I, II, III</string>>
     <string name="app_slogan">Não tem cadastro?</string>
     <string name="app_redefinir">Redefinir sua senha</string>>
     <string name="text_inicio">Faça login e entre no seu jardim</string>

@@ -9,28 +9,27 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
+        android:layout_width="376dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="260dp"
         android:text="@string/app_welcomeee"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="348dp"
+        android:layout_marginTop="476dp"
         android:text="@string/app_welcome"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintHorizontal_bias="0.703"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,24 +37,81 @@
         android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="508dp"
+        android:layout_marginTop="684dp"
         android:text="@string/app_welcomee"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintHorizontal_bias="0.703"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
 
+        android:layout_width="379dp"
+        android:layout_height="169dp"
+        android:src="@drawable/img_1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:layout_width="160dp"
+        android:layout_height="64dp"
+        android:src="@drawable/img_2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:layout_width="366dp"
+        android:layout_height="160dp"
+        android:src="@drawable/img_1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="308dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:layout_width="366dp"
+        android:layout_height="160dp"
+        android:src="@drawable/img_1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="524dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:layout_width="171dp"
+        android:layout_height="59dp"
+        android:src="@drawable/img_3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="364dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:layout_width="171dp"
+        android:layout_height="59dp"
+        android:src="@drawable/img_4"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="575dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+
         android:id="@+id/appCompatImageView3"
-        android:layout_width="480dp"
-        android:layout_height="418dp"
+        android:layout_width="542dp"
+        android:layout_height="398dp"
         android:src="@drawable/topo"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-31dp"
-        tools:layout_editor_absoluteY="-204dp" />
+        tools:layout_editor_absoluteX="-95dp"
+        tools:layout_editor_absoluteY="-196dp" />
+
+
 
     <androidx.appcompat.widget.AppCompatImageView
 
@@ -65,34 +121,6 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="7dp"
         tools:layout_editor_absoluteY="-61dp" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-
-        android:layout_width="128dp"
-        android:layout_height="103dp"
-        android:src="@drawable/porcopres"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="267dp"
-        tools:layout_editor_absoluteY="163dp" />
-
-
-    <androidx.appcompat.widget.AppCompatImageView
-
-        android:layout_width="128dp"
-        android:layout_height="103dp"
-        android:src="@drawable/macacopresss"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="267dp"
-        tools:layout_editor_absoluteY="334dp" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-
-        android:layout_width="128dp"
-        android:layout_height="103dp"
-        android:src="@drawable/sapopresss"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="267dp"
-        tools:layout_editor_absoluteY="462dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
