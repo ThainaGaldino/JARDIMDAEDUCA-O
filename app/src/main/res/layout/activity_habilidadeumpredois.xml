@@ -3,27 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Habilidade">
-
-
-<androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/appCompatImageView4"
-        android:layout_width="335dp"
-        android:layout_height="261dp"
-        android:src="@drawable/hab1"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="90dp" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-
-        android:layout_width="427dp"
-        android:layout_height="418dp"
-        android:src="@drawable/preumsapo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-48dp"
-        tools:layout_editor_absoluteY="351dp" />
+    android:layout_height="match_parent">
 
     <androidx.appcompat.widget.AppCompatImageView
 
@@ -44,11 +24,21 @@
         tools:layout_editor_absoluteX="7dp"
         tools:layout_editor_absoluteY="-61dp" />
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView4"
+        android:layout_width="380dp"
+        android:layout_height="321dp"
+        android:src="@drawable/habilidade1pre2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="58dp" />
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_iiniciar"
+        android:id="@+id/button_iniciarpre2"
         android:layout_width="109dp"
         android:layout_height="48dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginEnd="52dp"
         android:background="@drawable/bg_button_normal"
         android:letterSpacing="0.04"
         android:text="@string/text_button"
@@ -57,15 +47,15 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/appCompatImageView4"
-        app:layout_constraintHorizontal_bias="0.886"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/appCompatImageView4"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="175dp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_bloqueado"
+        android:id="@+id/button_bloq"
         android:layout_width="90dp"
         android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="64dp"
         android:background="@drawable/bg_bloqueado"
         android:letterSpacing="0.04"
         android:text="@string/text_bloqueado"
@@ -73,11 +63,26 @@
         android:textColor="@color/red"
         android:textSize="13sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView4"
-        app:layout_constraintTop_toBottomOf="@+id/button_iiniciar"
-        app:layout_constraintVertical_bias="0.41"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="265dp" />
+        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView4"
+        app:layout_constraintTop_toBottomOf="@+id/button_iniciarpre2"
+        tools:ignore="MissingConstraints" />
 
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:layout_width="238dp"
+        android:layout_height="332dp"
+        android:src="@drawable/macaco"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="404dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+
+        android:layout_width="219dp"
+        android:layout_height="293dp"
+        android:src="@drawable/balao_macaco"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="188dp"
+        tools:layout_editor_absoluteY="342dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
