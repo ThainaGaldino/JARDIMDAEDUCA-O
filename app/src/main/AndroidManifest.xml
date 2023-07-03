@@ -21,6 +21,8 @@
         <activity android:name=".Cadastro"></activity>
         <activity android:name=".Pres"></activity>
         <activity android:name=".Habilidade"></activity>
+        <activity android:name=".Habilidadeumpredois"></activity>
+        <activity android:name=".Habilidadeumpretres"></activity>
         <activity android:name=".Inicial"
             android:exported="true"
             android:priority="100">
