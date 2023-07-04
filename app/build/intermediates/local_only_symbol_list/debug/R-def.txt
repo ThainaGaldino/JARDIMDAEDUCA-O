@@ -2,11 +2,13 @@ R_DEF: Internal format may change without notice
 local
 color bege
 color black
+color brown
 color dark_purple
 color green
 color grey
 color lilas
 color lilas_500
+color pink
 color purple
 color purple_200
 color purple_500
@@ -24,6 +26,7 @@ drawable bg_layer_gradient
 drawable buttan
 drawable button
 drawable button_cadastrar
+drawable corpohumano
 drawable green
 drawable hab1
 drawable hab1pre3
@@ -69,6 +72,7 @@ id button_iiniciar
 id button_iniciar_atividade
 id button_iniciarpre2
 id button_iniciarpre3
+id corpohumano
 id editText_credentials
 id editText_data_de_nascimento
 id editText_email_do_responsavel
@@ -86,6 +90,7 @@ id textView_cadastro
 id textView_inicial
 id textView_serie
 id view
+layout activity_atividade
 layout activity_cadastro
 layout activity_habilidade
 layout activity_habilidadeumpredois
@@ -111,6 +116,7 @@ string name_tela
 string text_app
 string text_assistir
 string text_atividade
+string text_atividade1
 string text_bloqueado
 string text_button
 string text_conclude
