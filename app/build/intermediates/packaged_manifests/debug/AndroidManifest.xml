@@ -34,6 +34,8 @@
         <activity android:name="com.example.loginje.Cadastro" />
         <activity android:name="com.example.loginje.Pres" />
         <activity android:name="com.example.loginje.Habilidade" />
+        <activity android:name="com.example.loginje.Habilidadeumpredois" />
+        <activity android:name="com.example.loginje.Habilidadeumpretres" />
         <activity
             android:name="com.example.loginje.Inicial"
             android:exported="true"
