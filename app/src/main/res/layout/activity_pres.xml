@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/pre1"
         android:layout_width="376dp"
         android:layout_height="41dp"
         android:layout_marginTop="12dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toBottomOf="@+id/appCompatImageView6" />
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/pre2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="476dp"
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text2"
+        android:id="@+id/pre3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="684dp"
