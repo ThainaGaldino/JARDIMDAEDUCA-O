@@ -10,30 +10,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Habilidade extends AppCompatActivity {
+        @Override
+        protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+            super.onPostCreate(savedInstanceState);
 
-    private Button mButtoniiniciar, mButtonbloqueado;
+            setContentView(R.layout.activity_habilidade);
 
-    //responsável por iniciar ou executar a próxima atividade (activity) no fluxo de um aplicativo Android.
-    private void performNextActivity() {
-       {
-            Toast.makeText(this, "Habilidade um pre um", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(Habilidade.this, Pres.class));
+
+
         }
     }
-
-        class ClickButtonIiniciar implements View.OnClickListener {
-            @Override
-            public void onClick(View v) {
-
-            }
-        }
-        class ClickButtonBloqueado implements View.OnClickListener {
-            @Override
-            public void onClick(View v) {
-
-            }
-        }
-    }
-
-
-
