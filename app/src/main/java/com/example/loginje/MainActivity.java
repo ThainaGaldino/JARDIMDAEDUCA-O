@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonCadastro =findViewById(R.id.btn_cadastro);
         mButtonCadastro.setOnClickListener(new ClickButtonCadastrar());
 
+
     }
 
 

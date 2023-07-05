@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lilas">
+    android:background="@color/lilas"
+    tools:context=".Video">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="186dp"
@@ -42,7 +43,7 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_iniciar_atividade"
+        android:id="@+id/button_iniciaratividade"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:background="@drawable/bg_button_normal"

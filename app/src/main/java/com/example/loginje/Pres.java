@@ -42,16 +42,21 @@ public class Pres extends AppCompatActivity {
                 performNextActivity();
             }
         });
+
     }
 
     // Método responsável por iniciar ou executar a próxima atividade (activity) no fluxo de um aplicativo Android.
-    private void performNextActivity() {
-        if (isRequired()) {
-            Toast.makeText(this, "Mandatory information", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(Pres.this, Habilidade.class));
+    private void performNextActivity (){
+        if (isRequired()){
+            Toast.makeText(this,"Mandatory information", Toast.LENGTH_SHORT).show();
+            return;
         }
-    }
+        Toast.makeText(this,"Habilidade",Toast.LENGTH_SHORT).show();
 
+        //trocar de janela (tela de pres) //
+        Intent it= new Intent(Pres.this , Habilidade.class);
+        startActivity(it);
+    }
     private boolean isRequired() {
         return false;
     }

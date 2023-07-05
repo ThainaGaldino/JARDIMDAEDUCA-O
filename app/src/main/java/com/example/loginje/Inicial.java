@@ -30,7 +30,8 @@ public class Inicial extends AppCompatActivity {
         mButtonentrar = findViewById(R.id.button_entrar);
         mButtonentrar.setOnClickListener(new ClickButtonEntrar());
 
-}
+
+    }
 
     public boolean isRequired() {
         return required;
