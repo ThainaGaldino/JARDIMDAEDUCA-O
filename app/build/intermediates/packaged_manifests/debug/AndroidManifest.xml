@@ -36,6 +36,10 @@
         <activity android:name="com.example.loginje.Habilidade" />
         <activity android:name="com.example.loginje.Habilidadeumpredois" />
         <activity android:name="com.example.loginje.Habilidadeumpretres" />
+        <activity android:name="com.example.loginje.Video" />
+
+        <uses-permission android:name="android.permission.INTERNET" />
+
         <activity
             android:name="com.example.loginje.Inicial"
             android:exported="true"

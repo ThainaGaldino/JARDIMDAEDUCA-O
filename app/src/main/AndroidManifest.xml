@@ -23,6 +23,9 @@
         <activity android:name=".Habilidade"></activity>
         <activity android:name=".Habilidadeumpredois"></activity>
         <activity android:name=".Habilidadeumpretres"></activity>
+        <activity android:name=".Video"></activity>
+        <uses-permission android:name="android.permission.INTERNET"
+            tools:ignore="WrongManifestParent" />
         <activity android:name=".Inicial"
             android:exported="true"
             android:priority="100">

@@ -104,6 +104,7 @@ id textView_clique
 id textView_inicial
 id textView_serie
 id view
+id your_imageview_id
 layout activity_atividade
 layout activity_cadastro
 layout activity_habilidade
