@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"
+        tools:ignore="WrongManifestParent" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -24,11 +27,13 @@
         <activity android:name=".Habilidadeumpredois"></activity>
         <activity android:name=".Habilidadeumpretres"></activity>
         <activity android:name=".Video"></activity>
-        <uses-permission android:name="android.permission.INTERNET"
-            tools:ignore="WrongManifestParent" />
+        <activity android:name=".Corpohumano"></activity>
+
         <activity android:name=".Inicial"
             android:exported="true"
             android:priority="100">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
