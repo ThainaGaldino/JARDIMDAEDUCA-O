@@ -16,7 +16,9 @@ public class Conexao {
                StrictMode.setThreadPolicy(policy);
                Class.forName("net.sourceforge.jtds.jsbc.Driver").newInstance();
                conn = DriverManager.getConnection("jdbc:jtds:sqlserver://172.19.1.94;" +
-                       "databaseName= bd_jardimdaeducacao ; user=sa; password+123");
+                       "databaseName= bd_jardimdaeducacao ; user=sa; password=1234567");
+
+
 
 
 
