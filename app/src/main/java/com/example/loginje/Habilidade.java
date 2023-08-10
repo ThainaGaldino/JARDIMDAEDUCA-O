@@ -41,18 +41,5 @@ public class Habilidade extends AppCompatActivity {
     }
 
     private void performNextActivity() {
-        if (isRequired()) {
-            Toast.makeText(this, "Informação obrigatória", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        Toast.makeText(this, "Vídeo", Toast.LENGTH_SHORT).show();
-
-        Intent intent = new Intent(Habilidade.this, Video.class);
-        startActivity(intent);
-    }
-
-    private boolean isRequired() {
-        return false; // Você pode implementar sua própria lógica para verificar se alguma informação é obrigatória
     }
 }
