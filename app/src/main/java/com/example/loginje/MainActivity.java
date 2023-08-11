@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void performNextActivity (){
         if (isRequired()){
-            Toast.makeText(this,"Mandatory information", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Login", Toast.LENGTH_SHORT).show();
             return;
         }
         Toast.makeText(this,"Tela inicial",Toast.LENGTH_SHORT).show();
