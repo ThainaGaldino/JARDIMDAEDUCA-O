@@ -1,12 +1,12 @@
-#Thu Aug 03 11:43:57 BRT 2023
+#Tue Aug 15 19:02:36 BRT 2023
 path.3=classes2.dex
 path.2=3/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.3=C\:\\TCC\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.2=C\:\\TCC\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
-base.1=C\:\\TCC\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.0=C\:\\TCC\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.3=C\:\\Users\\Elaine\\AndroidStudioProjects\\LoginJE\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.2=C\:\\Users\\Elaine\\AndroidStudioProjects\\LoginJE\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
+base.1=C\:\\Users\\Elaine\\AndroidStudioProjects\\LoginJE\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=C\:\\Users\\Elaine\\AndroidStudioProjects\\LoginJE\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
