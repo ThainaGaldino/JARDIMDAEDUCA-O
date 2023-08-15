@@ -56,6 +56,30 @@ public class Cadastro extends AppCompatActivity {
         }
     }
 
+    public String getnome() {
+        return null;
+    }
+
+    public String getemail() {
+        return null;
+    }
+
+    public String getpassword() {
+        return null;
+    }
+
+    public String getnivel() {
+        return null;
+    }
+
+    public String getId() {
+        return null;
+    }
+
+    public String getname() {
+        return null;
+    }
+
     public class ClickButtonConcluir implements View.OnClickListener {
         @Override
         public void onClick(View v) {
