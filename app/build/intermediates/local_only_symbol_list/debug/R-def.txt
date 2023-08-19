@@ -149,6 +149,7 @@ string text_register
 string text_responsible_person_email
 string text_school_grade
 string text_sign_in
+string text_sucesso
 style Theme.LoginJE
 xml backup_rules
 xml data_extraction_rules
