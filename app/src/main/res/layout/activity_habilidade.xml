@@ -12,26 +12,11 @@
         android:id="@+id/appCompatImageView4"
         android:layout_width="335dp"
         android:layout_height="261dp"
-        android:layout_marginStart="32dp"
         android:src="@drawable/hab1"
-        app:layout_constraintEnd_toStartOf="@+id/appCompatImageView3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView3"
-        tools:ignore="MissingConstraints" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-
-        android:layout_width="405dp"
-        android:layout_height="378dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="32dp"
-        android:src="@drawable/preumsapo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView4"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -41,8 +26,8 @@
         android:layout_height="92dp"
         android:src="@drawable/topo"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="-29dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <androidx.appcompat.widget.AppCompatImageView
 
@@ -69,27 +54,26 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/appCompatImageView4"
-        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appCompatImageView4"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_bloqueado"
-        android:layout_width="90dp"
+        android:id="@+id/button_Bloqueado"
+        android:layout_width="120dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="28dp"
-        android:background="@drawable/bg_bloqueado"
+        android:layout_marginTop="168dp"
         android:letterSpacing="0.04"
         android:text="@string/text_bloqueado"
         android:textAllCaps="false"
         android:textColor="@color/red"
-        android:textSize="13sp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView4"
         app:layout_constraintEnd_toEndOf="@+id/appCompatImageView4"
-        app:layout_constraintTop_toBottomOf="@+id/button_iniciar"
-        app:layout_constraintVertical_bias="0.342"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView4"
         tools:ignore="MissingConstraints" />
 
 

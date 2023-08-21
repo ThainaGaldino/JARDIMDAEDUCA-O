@@ -22,7 +22,6 @@ public class Habilidade extends AppCompatActivity {
         setContentView(R.layout.activity_video);
 
         mButtonIniciar = findViewById(R.id.button_iniciar);
-        mButtonBloqueado = findViewById(R.id.button_bloqueado);
 
         mButtonIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,7 +29,6 @@ public class Habilidade extends AppCompatActivity {
                 performNextActivity();
             }
         });
-
         mButtonBloqueado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
