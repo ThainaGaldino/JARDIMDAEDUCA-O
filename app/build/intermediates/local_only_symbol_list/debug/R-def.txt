@@ -61,6 +61,7 @@ drawable video_corpo_humano
 id appCompatImageView
 id appCompatImageView10
 id appCompatImageView11
+id appCompatImageView12
 id appCompatImageView2
 id appCompatImageView3
 id appCompatImageView4
@@ -72,10 +73,10 @@ id appCompatImageView9
 id btn_cadastro
 id btn_forgot_password
 id btn_sign_in
+id button_Bloqueado
 id button_atividade
 id button_bloq
 id button_bloque
-id button_bloqueado
 id button_cadastrar
 id button_concluir
 id button_entrar
