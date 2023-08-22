@@ -88,6 +88,8 @@ id button_iniciarpre3
 id button_pre1
 id button_pre2
 id button_pre3
+id chip_consumption_cycle_0
+id chip_group_option
 id corpohumano
 id editText_credentials
 id editText_data_de_nascimento

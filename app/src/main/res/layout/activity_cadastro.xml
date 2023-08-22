@@ -86,6 +86,57 @@
         app:layout_constraintTop_toBottomOf="@+id/editText_email_do_responsavel"
         tools:ignore="MissingConstraints" />
 
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chip_group_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/purple"
+        app:singleLine="true"
+        app:singleSelection="true"
+        tools:ignore="MissingClass,MissingConstraints">
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_consumption_cycle_0"
+        style="Widget.MaterialComponents.Chip.Choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:checkable="false"
+        android:clickable="false"
+        android:text="PRE 1"
+        android:textSize="18sp"
+        app:chipBackgroundColor="#000000">
+
+    </com.google.android.material.chip.Chip>
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_consumption_cycle_1"
+        style="Widget.MaterialComponents.Chip.Choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:checkable="false"
+        android:clickable="false"
+        android:text="PRE 2"
+        android:textSize="18sp"
+        app:chipBackgroundColor="#000000">
+
+    </com.google.android.material.chip.Chip>
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_consumption_cycle_2"
+        style="Widget.MaterialComponents.Chip.Choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:checkable="false"
+        android:clickable="false"
+        android:text="PRE 3"
+        android:textSize="18sp"
+        app:chipBackgroundColor="#000000">
+
+    </com.google.android.material.chip.Chip>
+    </com.google.android.material.chip.ChipGroup>
 
 
     <TextView
