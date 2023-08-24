@@ -23,6 +23,7 @@
     <string name="text_name_student">Nome do aluno</string>
     <string name="text_date_of_birth">Data de Nascimento</string>
     <string name="text_responsible_person_email">E-mail do responsável</string>
+    <string name="text_senha">Senha</string>
     <string name="text_school_grade">Série escolar</string>
     <string name="text_conclude">Concluir</string>
     <string name="App_senhaNova">Senha Nova</string>

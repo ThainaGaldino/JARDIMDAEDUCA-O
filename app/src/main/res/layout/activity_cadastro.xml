@@ -42,19 +42,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
-        android:layout_marginBottom="32dp"
         android:background="@drawable/bg_edit_normal"
         android:hint="@string/text_responsible_person_email"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColor="@color/dark_purple"
         android:textColorHint="@color/dark_purple"
-        app:layout_constraintBottom_toTopOf="@+id/textView_serie"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_data_de_nascimento"
         tools:ignore="MissingConstraints" />
 
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/bg_edit_normal"
+        android:hint="@string/text_senha"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="@color/dark_purple"
+        android:textColorHint="@color/dark_purple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_email_do_responsavel"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editText_nome_aluno"
@@ -72,72 +86,71 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_cadastro"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView_serie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/text_school_grade"
-        android:textColor="@color/dark_purple"
-        android:textSize="12sp"
-        android:textStyle="italic|bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_email_do_responsavel"
-        tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/chip_group_option"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="6dp"
-        android:background="@color/purple"
-        app:singleLine="true"
-        app:singleSelection="true"
-        tools:ignore="MissingClass,MissingConstraints">
+    <!--    <androidx.wear.protolayout.material.chip.ChipGroup-->
+<!--        android:id="@+id/chip_group_option"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/purple"-->
+<!--        app:singleLine="true"-->
+<!--        app:singleSelection="true"-->
+<!--        tools:ignore="MissingClass,MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="0dp"-->
+<!--        tools:layout_editor_absoluteY="379dp">-->
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip_consumption_cycle_0"
-        style="Widget.MaterialComponents.Chip.Choice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:checkable="false"
-        android:clickable="false"
-        android:text="PRE 1"
-        android:textSize="18sp"
-        app:chipBackgroundColor="#000000">
+<!--          <androidx.wear.protolayout.material.chip.Chip-->
+<!--            android:id="@+id/chip_consumption_cycle_0"-->
+<!--            style="Widget.MaterialComponents.Chip.Choice"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="6dp"-->
+<!--            android:checkable="false"-->
+<!--            android:clickable="false"-->
+<!--            android:text="PRE 1"-->
+<!--            android:textSize="18sp"-->
+<!--            app:chipBackgroundColor="#000000">-->
 
-    </com.google.android.material.chip.Chip>
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip_consumption_cycle_1"
-        style="Widget.MaterialComponents.Chip.Choice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:checkable="false"
-        android:clickable="false"
-        android:text="PRE 2"
-        android:textSize="18sp"
-        app:chipBackgroundColor="#000000">
+<!--        </androidx.wear.protolayout.material.chip.Chip>-->
+<!--          <androidx.wear.protolayout.material.chip.Chip-->
+<!--            android:id="@+id/chip_consumption_cycle_1"-->
+<!--            style="Widget.MaterialComponents.Chip.Choice"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="6dp"-->
+<!--            android:checkable="false"-->
+<!--            android:clickable="false"-->
+<!--            android:text="PRE 2"-->
+<!--            android:textSize="18sp"-->
+<!--            app:chipBackgroundColor="#000000">-->
 
-    </com.google.android.material.chip.Chip>
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip_consumption_cycle_2"
-        style="Widget.MaterialComponents.Chip.Choice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:checkable="false"
-        android:clickable="false"
-        android:text="PRE 3"
-        android:textSize="18sp"
-        app:chipBackgroundColor="#000000">
+<!--        </androidx.wear.protolayout.material.chip.Chip>-->
+<!--        <androidx.wear.protolayout.material.chip.Chip-->
+<!--            android:id="@+id/chip_consumption_cycle_2"-->
+<!--            style="Widget.MaterialComponents.Chip.Choice"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="6dp"-->
+<!--            android:checkable="false"-->
+<!--            android:clickable="false"-->
+<!--            android:text="PRE 3"-->
+<!--            android:textSize="18sp"-->
+<!--            app:chipBackgroundColor="#000000">-->
 
-    </com.google.android.material.chip.Chip>
-    </com.google.android.material.chip.ChipGroup>
+<!--        </androidx.wear.protolayout.material.chip.Chip> -->
+<!--    </androidx.wear.protolayout.material.chip.ChipGroup>-->
 
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView_serie"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/text_school_grade"-->
+<!--        android:textColor="@color/dark_purple"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textStyle="italic|bold"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="61dp"-->
+<!--        tools:layout_editor_absoluteY="434dp" />-->
 
     <TextView
         android:id="@+id/textView_cadastro"
@@ -157,8 +170,8 @@
         android:id="@+id/button_concluir"
         android:layout_width="160dp"
         android:layout_height="48dp"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="211dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="255dp"
         android:background="@drawable/bg_button_normal"
@@ -170,7 +183,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_email_do_responsavel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_senha"
         tools:ignore="MissingConstraints" />
 
 

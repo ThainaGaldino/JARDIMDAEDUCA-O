@@ -21,14 +21,14 @@ public class CadastroDao {
         int vResponse = 0;
         String mSql;
         try {
-            mSql = "INSERT INTO cadastro (nome, email, password , nivel) VALUES ( ?, ?, ?, ?)";
+            mSql = "INSERT INTO cadastro (nome, email, senha , datanasc) VALUES ( ?, ?, ?, ?)";
 
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
 
             mPreparedStatement.setString(1, mCadastro.getnome());
             mPreparedStatement.setString(2, mCadastro.getemail());
             mPreparedStatement.setString(3, mCadastro.getpassword());
-            mPreparedStatement.setString(4, mCadastro.getnivel());
+            mPreparedStatement.setString(4, mCadastro.getdata());
 
             vResponse = mPreparedStatement.executeUpdate(); // 1 sucesso
 
@@ -47,14 +47,14 @@ public class CadastroDao {
         int vResponse = 0;
         String mSql;
         try {
-            mSql ="UPDATE cadastro SET name=? , email=? , password=? , nivel=? WHERE id=?";
+            mSql ="UPDATE cadastro SET name=? , email=? , senha=? , datanasc=? WHERE id=?";
 
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
 
             mPreparedStatement.setString(1, mCadastro.getnome());
             mPreparedStatement.setString(2, mCadastro.getemail());
             mPreparedStatement.setString(3, mCadastro.getpassword());
-            mPreparedStatement.setString(4, mCadastro.getnivel());
+            mPreparedStatement.setString(4, mCadastro.getdata());
             mPreparedStatement.setString(5, mCadastro.getId());
 
             vResponse = mPreparedStatement.executeUpdate(); // 1 sucesso
@@ -115,13 +115,13 @@ public class CadastroDao {
 
     public static String authenticateUser(Cadastro mCadastro , Context mContext){
         String mResponse = "";
-        String mSql = "SELECT id, name, email , password, nivel FROM cadastro WHERE email LIKE ? password LIKE ? name LIKE ? ";
+        String mSql = "SELECT id, name, email , senha, datanasc FROM cadastro WHERE email LIKE ? senha LIKE ? name LIKE ? ";
 
         try {
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
             mPreparedStatement.setString(1, mCadastro.getemail());
             mPreparedStatement.setString(2, mCadastro.getpassword());
-            mPreparedStatement.setString(2, mCadastro.getname());
+            mPreparedStatement.setString(3, mCadastro.getname());
             ResultSet mResultSet = mPreparedStatement.executeQuery();
 
         } catch (Exception e){

@@ -2,25 +2,44 @@ package com.example.loginje;
 
 public class User {
 
-        public static final String TAG = "Login Table";
+        public static final String TAG = "Aluno Table";
+    private final String mNome;
+    private final String mDatanasc;
 
-        //COLUNAS = MEMBROS
+    //COLUNAS = MEMBROS
 
-    public User(String mPassword, String mEmail, String mApikey, String mResetPasswordOtp, long mResetPasswordCreateAt) {
+    public User(String mPassword, String mEmail, String mNome, String mDatanasc, String mApikey, String mResetPasswordOtp, long mResetPasswordCreateAt) {
         this.mPassword = mPassword;
         this.mEmail = mEmail;
+        this.mNome = mNome;
+        this.mDatanasc = mDatanasc;
         this.mApikey = mApikey;
-        this.mResetPasswordOtp = mResetPasswordOtp;
-        this.mResetPasswordCreateAt = mResetPasswordCreateAt;
+
     }
 
-    public User(int mId, String mPassword, String mEmail, String mApikey, String mResetPasswordOtp, long mResetPasswordCreateAt) {
+    public User(String mNome, String mDatanasc, int mId, String mPassword, String mEmail, String mApikey, String mResetPasswordOtp, long mResetPasswordCreateAt) {
+        this.mNome = mNome;
+        this.mDatanasc = mDatanasc;
         this.mId = mId;
         this.mPassword = mPassword;
         this.mEmail = mEmail;
         this.mApikey = mApikey;
-        this.mResetPasswordOtp = mResetPasswordOtp;
-        this.mResetPasswordCreateAt = mResetPasswordCreateAt;
+
+    }
+
+    public User(String mNome, String mDatanasc, int mId, String mPassword, String mEmail) {
+        this.mNome = mNome;
+        this.mDatanasc = mDatanasc;
+        this.mId = mId;
+        this.mPassword = mPassword;
+        this.mEmail = mEmail;
+    }
+
+    public User(String mNome, String mDatanasc, String mPassword, String mEmail) {
+        this.mNome = mNome;
+        this.mDatanasc = mDatanasc;
+        this.mPassword = mPassword;
+        this.mEmail = mEmail;
     }
 
     @Override
@@ -30,8 +49,6 @@ public class User {
                 ", mPassword='" + mPassword + '\'' +
                 ", mEmail='" + mEmail + '\'' +
                 ", mApikey='" + mApikey + '\'' +
-                ", mResetPasswordOtp='" + mResetPasswordOtp + '\'' +
-                ", mResetPasswordCreateAt=" + mResetPasswordCreateAt +
                 '}';
     }
 
@@ -70,26 +87,11 @@ public class User {
         this.mApikey = mApikey;
     }
 
-    public String getmResetPasswordOtp() {
-        return mResetPasswordOtp;
-    }
 
-    public void setmResetPasswordOtp(String mResetPasswordOtp) {
-        this.mResetPasswordOtp = mResetPasswordOtp;
-    }
-
-    public long getmResetPasswordCreateAt() {
-        return mResetPasswordCreateAt;
-    }
-
-    public void setmResetPasswordCreateAt(long mResetPasswordCreateAt) {
-        this.mResetPasswordCreateAt = mResetPasswordCreateAt;
-    }
 
     private String mEmail;
     private String mApikey;
-    private String mResetPasswordOtp;
-    private long mResetPasswordCreateAt;
+
 
 
     public String getpassword() {
@@ -105,15 +107,21 @@ public class User {
         return null;
     }
 
-    public String getResetPasswordOtp() {
+
+
+    public String getId() {
         return null;
     }
 
-    public long getResetPasswordCreateAt() {
-        return 0;
+    public String getnome() {
+        return null;
     }
 
-    public String getId() {
+    public String getdatanasc() {
+        return null;
+    }
+
+    public String getstatus() {
         return null;
     }
 }

@@ -12,7 +12,7 @@ import java.util.List;
 public class UserDao {
 
 
-    public static final String TAG = "CRUD User";
+    public static final String TAG = "CRUD Aluno";
     private static ArrayList<User> mUserList;
 
     public static int insertUser(User mUser , Context mContext) {
@@ -21,22 +21,20 @@ public class UserDao {
         int vResponse = 0;
         String mSql;
         try {
-            mSql = "INSERT INTO User (password, email, Apikey, reset_password_otp, reset_password_create_at) VALUES ( ?, ?, ?, ?, ?)";
+            mSql = "INSERT INTO Aluno (email, senha, nome, datanasc, statusUsuario) VALUES (?, ?, ?, ?, 'ATIVO')";
 
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
 
-            mPreparedStatement.setString(1, mUser.getpassword());
-            mPreparedStatement.setString(2, mUser.getemail());
-            mPreparedStatement.setString(3, mUser.getApikey());
-            mPreparedStatement.setString(4, mUser.getResetPasswordOtp());
-            mPreparedStatement.setLong(5, mUser.getResetPasswordCreateAt());
+            mPreparedStatement.setString(1, mUser.getemail());
+            mPreparedStatement.setString(2, mUser.getpassword());
+            mPreparedStatement.setString(3, mUser.getnome());
+            mPreparedStatement.setString(4, mUser.getdatanasc());
 
-            vResponse = mPreparedStatement.executeUpdate(); // 1 sucesso
+            vResponse = mPreparedStatement.executeUpdate(); // 1 para sucesso
+
 
         } catch (Exception e){
             Log.e( TAG , e.getMessage());
-        }
-        {
         }
 
 
@@ -48,16 +46,18 @@ public class UserDao {
         int vResponse = 0;
         String mSql;
         try {
-            mSql ="UPDATE User SET password=?, email=? , apikey=? , reset_password_otp=? , reset_password_create_at=? WHERE id=?";
+            mSql ="UPDATE Aluno SET senha=?, email=? , nome=?, datanasc=?,apikey=? , status='ATIVO' WHERE id=?";
 
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
 
             mPreparedStatement.setString(1, mUser.getpassword());
             mPreparedStatement.setString(2, mUser.getemail());
-            mPreparedStatement.setString(3, mUser.getApikey());
-            mPreparedStatement.setString(4, mUser.getResetPasswordOtp());
-            mPreparedStatement.setLong(5, mUser.getResetPasswordCreateAt());
-            mPreparedStatement.setString(6, mUser.getId());
+            mPreparedStatement.setString(3, mUser.getnome());
+            mPreparedStatement.setString(4, mUser.getdatanasc());
+            mPreparedStatement.setString(5, mUser.getApikey());
+            mPreparedStatement.setString(6, mUser.getstatus());
+
+            mPreparedStatement.setString(7, mUser.getId());
 
             vResponse = mPreparedStatement.executeUpdate(); // 1 sucesso
 
@@ -76,7 +76,7 @@ public class UserDao {
         int vResponse = 0;
         String mSql;
         try {
-            mSql ="DELETE FROM User WHERE id=?";
+            mSql ="DELETE FROM Aluno WHERE id=?";
 
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
 
@@ -99,7 +99,7 @@ public class UserDao {
         int vResponse = 0;
         String mSql;
         try {
-            mSql ="DELETE FROM User";
+            mSql ="DELETE FROM Aluno";
 
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
 
@@ -119,21 +119,18 @@ public class UserDao {
         List<User> mUserList = null;
         String mSql;
         try {
-            mSql = "SELECT id, password, email, Apikey, reset_password_otp, reset_password_create_at FROM users ORDER BY name ASC";
+            mSql = "SELECT id, email, senha, statusUsuario FROM Aluno ORDER BY email ASC";
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
         ResultSet mResultSet = mPreparedStatement.executeQuery();
         mUserList = new ArrayList<User>();
         while (mResultSet.next()){
 
+            String mNome = null;
+            String mDatanasc = null;
             mUserList.add(new User(
-                    mResultSet.getString(1),
-                    mResultSet.getString(2),
+                    mNome, mDatanasc, mResultSet.getInt(1),
                     mResultSet.getString(3),
-                    mResultSet.getString(4),
-                    mResultSet.getLong(5)
-
-
-
+                    mResultSet.getString(2)
             ));
         }
 
@@ -146,12 +143,14 @@ public class UserDao {
 
         public static String authenticateUser(User mUser , Context mContext){
         String mResponse = "";
-        String mSql = "SELECT id, password, email FROM user WHERE password lIKE ? AND email LIKE ? ";
+        String mSql = "SELECT id, senha, email, nome , datanasc, statusUsuario FROM Aluno WHERE senha lIKE ? AND email LIKE ? AND nome LIKE ? AND datanas LIKE ? ";
 
         try {
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
             mPreparedStatement.setString(1, mUser.getpassword());
-            mPreparedStatement.setString(2, mUser.getmEmail());
+            mPreparedStatement.setString(2, mUser.getemail());
+            mPreparedStatement.setString(3, mUser.getnome());
+            mPreparedStatement.setString(4, mUser.getdatanasc());
             ResultSet mResultSet = mPreparedStatement.executeQuery();
 
         } catch (Exception e){

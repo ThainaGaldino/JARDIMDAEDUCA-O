@@ -20,9 +20,9 @@ public class MSSQLConnectionHelper {
     //1- SOMEE.COM
 
     private static String mStringConnectionUrl;
-    private static String mStringServerIpnome = "jardim.mssql.somee.com";
-    private static String mStringUserName = " sa";
-    private static String mStringpassword = "1234567";
+    private static String mStringServerIpnome = "bd_jardimdaeducacao.mssql.somee.com";
+    private static String mStringUserName = "JardimEduc_SQLLogin_1";
+    private static String mStringpassword = "a3zurkya7i";
     private static String mStringDatabase = "bd_jardimdaeducacao";
     //2 - LOCALHOST
 
@@ -45,7 +45,7 @@ public class MSSQLConnectionHelper {
 
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
 
-            mStringConnectionUrl = "jdbc:jtbs:sqlserver://" + mStringServerIpnome +
+            mStringConnectionUrl = "jdbc:jtds:sqlserver://" + mStringServerIpnome +
                     ";databaseName=" + mStringDatabase +
                     ";user=" + mStringUserName +
                     ";password=" + mStringpassword + ";";
