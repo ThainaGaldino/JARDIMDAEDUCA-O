@@ -2,7 +2,7 @@ package com.example.loginje;
 
 public class User {
 
-        public static final String TAG = "Aluno Table";
+    public static final String TAG = "Aluno";
     private final String mNome;
     private final String mDatanasc;
 
@@ -27,7 +27,7 @@ public class User {
 
     }
 
-    public User(String mNome, String mDatanasc, int mId, String mPassword, String mEmail) {
+    public User( int mId, String mNome, String mEmail, String mPassword, String mDatanasc) {
         this.mNome = mNome;
         this.mDatanasc = mDatanasc;
         this.mId = mId;
@@ -35,7 +35,7 @@ public class User {
         this.mEmail = mEmail;
     }
 
-    public User(String mNome, String mDatanasc, String mPassword, String mEmail) {
+    public User(String mNome, String mEmail, String mPassword, String mDatanasc) {
         this.mNome = mNome;
         this.mDatanasc = mDatanasc;
         this.mPassword = mPassword;
@@ -48,7 +48,7 @@ public class User {
                 "mId=" + mId +
                 ", mPassword='" + mPassword + '\'' +
                 ", mEmail='" + mEmail + '\'' +
-                ", mApikey='" + mApikey + '\'' +
+                ", mNome='" + mNome + '\'' +
                 '}';
     }
 

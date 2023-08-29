@@ -6,7 +6,9 @@ import android.util.Log;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class UserDao {
@@ -15,38 +17,40 @@ public class UserDao {
     public static final String TAG = "CRUD Aluno";
     private static ArrayList<User> mUserList;
 
-    public static int insertUser(User mUser , Context mContext) {
+    public static int insertUser(String nome, String email, String senha, String dataNasc, Context mContext) {
 
         // 0 não fez o insert                 1 fez o insert com sucesso
         int vResponse = 0;
         String mSql;
         try {
-            mSql = "INSERT INTO Aluno (email, senha, nome, datanasc, statusUsuario) VALUES (?, ?, ?, ?, 'ATIVO')";
+            mSql = "INSERT INTO Aluno (email, senha, nome, datanasc, statusUsuario) VALUES (?, ?, ?, ?, 'Ativo')";
 
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
 
-            mPreparedStatement.setString(1, mUser.getemail());
-            mPreparedStatement.setString(2, mUser.getpassword());
-            mPreparedStatement.setString(3, mUser.getnome());
-            mPreparedStatement.setString(4, mUser.getdatanasc());
+            mPreparedStatement.setString(1, email);
+            mPreparedStatement.setString(2, senha);
+            mPreparedStatement.setString(3, nome);
+
+            mPreparedStatement.setDate(4, java.sql.Date.valueOf(dataNasc));
+            //mPreparedStatement.setString(5, mUser.getstatus());
 
             vResponse = mPreparedStatement.executeUpdate(); // 1 para sucesso
 
 
-        } catch (Exception e){
-            Log.e( TAG , e.getMessage());
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
         }
 
 
         return vResponse;
     }
 
-    public static int updateUser(User mUser , Context mContext) {
+    public static int updateUser(User mUser, Context mContext) {
 
         int vResponse = 0;
         String mSql;
         try {
-            mSql ="UPDATE Aluno SET senha=?, email=? , nome=?, datanasc=?,apikey=? , status='ATIVO' WHERE id=?";
+            mSql = "UPDATE Aluno SET senha=?, email=? , nome=?, datanasc=?,apikey=? , status='Ativo' WHERE id=?";
 
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
 
@@ -61,8 +65,8 @@ public class UserDao {
 
             vResponse = mPreparedStatement.executeUpdate(); // 1 sucesso
 
-        } catch (Exception e){
-            Log.e( TAG , e.getMessage());
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
         }
         {
         }
@@ -71,12 +75,12 @@ public class UserDao {
         return vResponse;
     }
 
-    public static int deleteUser(User mUser , Context mContext) {
+    public static int deleteUser(User mUser, Context mContext) {
 
         int vResponse = 0;
         String mSql;
         try {
-            mSql ="DELETE FROM Aluno WHERE id=?";
+            mSql = "DELETE FROM Aluno WHERE id=?";
 
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
 
@@ -84,8 +88,8 @@ public class UserDao {
 
             vResponse = mPreparedStatement.executeUpdate(); // 1 sucesso
 
-        } catch (Exception e){
-            Log.e( TAG , e.getMessage());
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
         }
         {
         }
@@ -99,14 +103,14 @@ public class UserDao {
         int vResponse = 0;
         String mSql;
         try {
-            mSql ="DELETE FROM Aluno";
+            mSql = "DELETE FROM Aluno";
 
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
 
             vResponse = mPreparedStatement.executeUpdate(); // 1 sucesso
 
-        } catch (Exception e){
-            Log.e( TAG , e.getMessage());
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
         }
         {
         }
@@ -115,33 +119,31 @@ public class UserDao {
         return vResponse;
     }
 
-    public static List<User> listAllUser(Context mContext){
+    public static List<User> listAllUser(Context mContext) {
         List<User> mUserList = null;
         String mSql;
         try {
-            mSql = "SELECT id, email, senha, statusUsuario FROM Aluno ORDER BY email ASC";
+            mSql = "SELECT id, nome, email, senha, statusUsuario FROM Aluno ORDER BY email ASC";
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
-        ResultSet mResultSet = mPreparedStatement.executeQuery();
-        mUserList = new ArrayList<User>();
-        while (mResultSet.next()){
-
-            String mNome = null;
-            String mDatanasc = null;
-            mUserList.add(new User(
-                    mNome, mDatanasc, mResultSet.getInt(1),
-                    mResultSet.getString(3),
-                    mResultSet.getString(2)
-            ));
-        }
+            ResultSet mResultSet = mPreparedStatement.executeQuery();
+            mUserList = new ArrayList<User>();
+            while (mResultSet.next()) {
+                mUserList.add(new User(mResultSet.getInt(1),
+                        mResultSet.getString(2),
+                        mResultSet.getString(3),
+                        mResultSet.getString(4),
+                        mResultSet.getString(5)
+                ));
+            }
 
         } catch (SQLException e) {
-            Log.e(TAG , e.getMessage());
+            Log.e(TAG, e.getMessage());
         }
         return mUserList;
     }
 
 
-        public static String authenticateUser(User mUser , Context mContext){
+    public static String authenticateUser(User mUser, Context mContext) {
         String mResponse = "";
         String mSql = "SELECT id, senha, email, nome , datanasc, statusUsuario FROM Aluno WHERE senha lIKE ? AND email LIKE ? AND nome LIKE ? AND datanas LIKE ? ";
 
@@ -153,14 +155,14 @@ public class UserDao {
             mPreparedStatement.setString(4, mUser.getdatanasc());
             ResultSet mResultSet = mPreparedStatement.executeQuery();
 
-        } catch (Exception e){
-            mResponse ="Exception";
-            Log.e(TAG , e.getMessage());
+        } catch (Exception e) {
+            mResponse = "Exception";
+            Log.e(TAG, e.getMessage());
             e.printStackTrace();
         }
-            return mResponse;
+        return mResponse;
 
-        }
+    }
 
 
 }

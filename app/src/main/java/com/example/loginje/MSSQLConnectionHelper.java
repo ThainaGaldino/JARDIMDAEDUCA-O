@@ -20,10 +20,10 @@ public class MSSQLConnectionHelper {
     //1- SOMEE.COM
 
     private static String mStringConnectionUrl;
-    private static String mStringServerIpnome = "bd_jardimdaeducacao.mssql.somee.com";
-    private static String mStringUserName = "JardimEduc_SQLLogin_1";
-    private static String mStringpassword = "a3zurkya7i";
-    private static String mStringDatabase = "bd_jardimdaeducacao";
+    private static String mStringServerIpnome = "JardimEduc.mssql.somee.com";
+    private static String mStringUserName = "jardim";
+    private static String mStringpassword = "12345678";
+    private static String mStringDatabase = "JardimEduc";
     //2 - LOCALHOST
 
     //private static  String mStringServerIpnome  = "10.0.2.2";
@@ -38,7 +38,7 @@ public class MSSQLConnectionHelper {
 
         Connection mConnection = null;
 
-        try{
+        try {
 
             StrictMode.ThreadPolicy mPolicy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(mPolicy);
@@ -46,31 +46,32 @@ public class MSSQLConnectionHelper {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
 
             mStringConnectionUrl = "jdbc:jtds:sqlserver://" + mStringServerIpnome +
-                    ";databaseName=" + mStringDatabase +
+                    ";database=" + mStringDatabase +
                     ";user=" + mStringUserName +
                     ";password=" + mStringpassword + ";";
 
 
             mConnection = DriverManager.getConnection(mStringConnectionUrl);
+           // mConnection = DriverManager.getConnection("jdbc:jtds:sqlserver://JardimEduc.mssql.somee.com;database=bd_jardimdaeducacao;user=jardim;password=12345678;");
 
-            Log.i(TAG , "Connection Successful");
-        } catch (ClassNotFoundException e){
+            Log.i(TAG, "Connection Successful");
+        } catch (ClassNotFoundException e) {
             String mMessage = "Class Not Found" + e.getMessage();
-            Log.e(TAG , mMessage);
+            Log.e(TAG, mMessage);
 
-        }catch (SQLException e){
+        } catch (SQLException e) {
             String mMessage = "Database Fail" + e.getMessage();
-            Log.e(TAG , mMessage);
+            Log.e(TAG, mMessage);
 
-        }catch (Exception e){
+        } catch (Exception e) {
             String mMessage = "Failure Unlnown" + e.getMessage();
-            Log.e(TAG , mMessage);
+            Log.e(TAG, mMessage);
 
         }
 
         return mConnection;
 
 
-         }
-
     }
+
+}

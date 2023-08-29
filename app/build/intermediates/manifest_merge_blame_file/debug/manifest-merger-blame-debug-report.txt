@@ -11,7 +11,7 @@
 9-->C:\TCC\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\TCC\app\src\main\AndroidManifest.xml:5:5-6:46
+11-->C:\TCC\app\src\main\AndroidManifest.xml:5:5-67
 11-->C:\TCC\app\src\main\AndroidManifest.xml:5:22-64
 12
 13    <queries>
@@ -36,76 +36,76 @@
 23-->[androidx.core:core:1.11.0-beta02] C:\Users\sarah\.gradle\caches\transforms-3\187fbe3a3c4722c95143dba74be2ffb9\transformed\core-1.11.0-beta02\AndroidManifest.xml:26:22-94
 24
 25    <application
-25-->C:\TCC\app\src\main\AndroidManifest.xml:8:5-45:19
+25-->C:\TCC\app\src\main\AndroidManifest.xml:7:5-44:19
 26        android:allowBackup="true"
-26-->C:\TCC\app\src\main\AndroidManifest.xml:10:9-35
+26-->C:\TCC\app\src\main\AndroidManifest.xml:9:9-35
 27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 27-->[androidx.core:core:1.11.0-beta02] C:\Users\sarah\.gradle\caches\transforms-3\187fbe3a3c4722c95143dba74be2ffb9\transformed\core-1.11.0-beta02\AndroidManifest.xml:28:18-86
 28        android:dataExtractionRules="@xml/data_extraction_rules"
-28-->C:\TCC\app\src\main\AndroidManifest.xml:11:9-65
+28-->C:\TCC\app\src\main\AndroidManifest.xml:10:9-65
 29        android:debuggable="true"
 30        android:extractNativeLibs="false"
 31        android:fullBackupContent="@xml/backup_rules"
-31-->C:\TCC\app\src\main\AndroidManifest.xml:12:9-54
+31-->C:\TCC\app\src\main\AndroidManifest.xml:11:9-54
 32        android:icon="@mipmap/ic_launcher"
-32-->C:\TCC\app\src\main\AndroidManifest.xml:13:9-43
+32-->C:\TCC\app\src\main\AndroidManifest.xml:12:9-43
 33        android:label="@string/app_name"
-33-->C:\TCC\app\src\main\AndroidManifest.xml:14:9-41
+33-->C:\TCC\app\src\main\AndroidManifest.xml:13:9-41
 34        android:supportsRtl="true"
-34-->C:\TCC\app\src\main\AndroidManifest.xml:15:9-35
+34-->C:\TCC\app\src\main\AndroidManifest.xml:14:9-35
 35        android:testOnly="true"
 36        android:theme="@style/Theme.LoginJE"
-36-->C:\TCC\app\src\main\AndroidManifest.xml:16:9-45
+36-->C:\TCC\app\src\main\AndroidManifest.xml:15:9-45
 37        android:usesCleartextTraffic="true" >
-37-->C:\TCC\app\src\main\AndroidManifest.xml:9:9-44
+37-->C:\TCC\app\src\main\AndroidManifest.xml:8:9-44
 38        <activity
-38-->C:\TCC\app\src\main\AndroidManifest.xml:18:9-22:20
+38-->C:\TCC\app\src\main\AndroidManifest.xml:17:9-21:20
 39            android:name="com.example.loginje.MainActivity"
-39-->C:\TCC\app\src\main\AndroidManifest.xml:19:13-41
+39-->C:\TCC\app\src\main\AndroidManifest.xml:18:13-41
 40            android:exported="true" >
-40-->C:\TCC\app\src\main\AndroidManifest.xml:20:13-36
+40-->C:\TCC\app\src\main\AndroidManifest.xml:19:13-36
 41        </activity>
 42        <activity android:name="com.example.loginje.RedefinirActivity" />
-42-->C:\TCC\app\src\main\AndroidManifest.xml:24:9-64
-42-->C:\TCC\app\src\main\AndroidManifest.xml:24:19-52
+42-->C:\TCC\app\src\main\AndroidManifest.xml:23:9-64
+42-->C:\TCC\app\src\main\AndroidManifest.xml:23:19-52
 43        <activity android:name="com.example.loginje.Cadastro" />
-43-->C:\TCC\app\src\main\AndroidManifest.xml:25:9-55
-43-->C:\TCC\app\src\main\AndroidManifest.xml:25:19-43
+43-->C:\TCC\app\src\main\AndroidManifest.xml:24:9-55
+43-->C:\TCC\app\src\main\AndroidManifest.xml:24:19-43
 44        <activity android:name="com.example.loginje.Pres" />
-44-->C:\TCC\app\src\main\AndroidManifest.xml:26:9-51
-44-->C:\TCC\app\src\main\AndroidManifest.xml:26:19-39
+44-->C:\TCC\app\src\main\AndroidManifest.xml:25:9-51
+44-->C:\TCC\app\src\main\AndroidManifest.xml:25:19-39
 45        <activity android:name="com.example.loginje.Habilidade" />
-45-->C:\TCC\app\src\main\AndroidManifest.xml:27:9-57
-45-->C:\TCC\app\src\main\AndroidManifest.xml:27:19-45
+45-->C:\TCC\app\src\main\AndroidManifest.xml:26:9-57
+45-->C:\TCC\app\src\main\AndroidManifest.xml:26:19-45
 46        <activity android:name="com.example.loginje.Habilidadeumpredois" />
-46-->C:\TCC\app\src\main\AndroidManifest.xml:28:9-66
-46-->C:\TCC\app\src\main\AndroidManifest.xml:28:19-54
+46-->C:\TCC\app\src\main\AndroidManifest.xml:27:9-66
+46-->C:\TCC\app\src\main\AndroidManifest.xml:27:19-54
 47        <activity android:name="com.example.loginje.Habilidadeumpretres" />
-47-->C:\TCC\app\src\main\AndroidManifest.xml:29:9-66
-47-->C:\TCC\app\src\main\AndroidManifest.xml:29:19-54
+47-->C:\TCC\app\src\main\AndroidManifest.xml:28:9-66
+47-->C:\TCC\app\src\main\AndroidManifest.xml:28:19-54
 48        <activity android:name="com.example.loginje.Video" />
-48-->C:\TCC\app\src\main\AndroidManifest.xml:30:9-52
-48-->C:\TCC\app\src\main\AndroidManifest.xml:30:19-40
+48-->C:\TCC\app\src\main\AndroidManifest.xml:29:9-52
+48-->C:\TCC\app\src\main\AndroidManifest.xml:29:19-40
 49        <activity android:name="com.example.loginje.Corpohumano" />
-49-->C:\TCC\app\src\main\AndroidManifest.xml:31:9-58
-49-->C:\TCC\app\src\main\AndroidManifest.xml:31:19-46
+49-->C:\TCC\app\src\main\AndroidManifest.xml:30:9-58
+49-->C:\TCC\app\src\main\AndroidManifest.xml:30:19-46
 50        <activity
-50-->C:\TCC\app\src\main\AndroidManifest.xml:33:9-43:20
+50-->C:\TCC\app\src\main\AndroidManifest.xml:32:9-42:20
 51            android:name="com.example.loginje.Inicial"
-51-->C:\TCC\app\src\main\AndroidManifest.xml:33:19-42
+51-->C:\TCC\app\src\main\AndroidManifest.xml:32:19-42
 52            android:exported="true"
-52-->C:\TCC\app\src\main\AndroidManifest.xml:34:13-36
+52-->C:\TCC\app\src\main\AndroidManifest.xml:33:13-36
 53            android:priority="100" >
-53-->C:\TCC\app\src\main\AndroidManifest.xml:35:13-35
+53-->C:\TCC\app\src\main\AndroidManifest.xml:34:13-35
 54            <intent-filter>
-54-->C:\TCC\app\src\main\AndroidManifest.xml:38:13-42:29
+54-->C:\TCC\app\src\main\AndroidManifest.xml:37:13-41:29
 55                <action android:name="android.intent.action.MAIN" />
-55-->C:\TCC\app\src\main\AndroidManifest.xml:39:17-69
-55-->C:\TCC\app\src\main\AndroidManifest.xml:39:25-66
+55-->C:\TCC\app\src\main\AndroidManifest.xml:38:17-69
+55-->C:\TCC\app\src\main\AndroidManifest.xml:38:25-66
 56
 57                <category android:name="android.intent.category.LAUNCHER" />
-57-->C:\TCC\app\src\main\AndroidManifest.xml:41:17-77
-57-->C:\TCC\app\src\main\AndroidManifest.xml:41:27-74
+57-->C:\TCC\app\src\main\AndroidManifest.xml:40:17-77
+57-->C:\TCC\app\src\main\AndroidManifest.xml:40:27-74
 58            </intent-filter>
 59        </activity>
 60

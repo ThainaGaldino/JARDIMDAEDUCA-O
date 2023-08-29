@@ -14,6 +14,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatEditText;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class Cadastro extends AppCompatActivity {
 
@@ -56,42 +60,32 @@ public class Cadastro extends AppCompatActivity {
         }
     }
 
-    public String getnome() {
-        return null;
-    }
-
-    public String getemail() {
-        return null;
-    }
-
-    public String getpassword() {
-        return null;
-    }
-
-    public String getnivel() {
-        return null;
-    }
-
-    public String getId() {
-        return null;
-    }
-
-    public String getname() {
-        return null;
-    }
-
-    public String getdata() {
-        return null;
-    }
-
     public class ClickButtonConcluir implements View.OnClickListener {
         @Override
         public void onClick(View v) {
-            String email = mEditTextemaildoresponsavel.getText().toString();
-            String senha = mEditTextsenha.getText().toString();
+            mEditTextnomealuno = findViewById(R.id.editText_nome_aluno);
+            mEditTextdatadenascimento = findViewById(R.id.editText_data_de_nascimento);
+            mEditTextemaildoresponsavel = findViewById(R.id.editText_email_do_responsavel);
+            mEditTextsenha = findViewById(R.id.editText_senha);
+
+            String mEmail = mEditTextemaildoresponsavel.getText().toString();
+            String mSenha = mEditTextsenha.getText().toString();
             String mNome = mEditTextnomealuno.getText().toString();
             String mDatanasc = mEditTextdatadenascimento.getText().toString();
-            int resultado = UserDao.insertUser(new User(mNome, mDatanasc, senha, email), getApplicationContext());
+
+            // converter data para DateTime
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            Date dataNasc;
+            try {
+                dataNasc = sdf.parse(mDatanasc);
+            } catch (ParseException e) {
+                throw new RuntimeException(e);
+            }
+
+            int resultado = 0;
+            String ajustada = mDatanasc.substring(6,10) + "-" + mDatanasc.substring(3,5) + "-"
+                    + mDatanasc.substring(0,2);
+            resultado = UserDao.insertUser(mNome, mEmail, mSenha, ajustada, getApplicationContext());
             if(resultado==1){
                 Intent it = new Intent(Cadastro.this, MainActivity.class);
                 startActivity(it);
