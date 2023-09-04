@@ -12,9 +12,9 @@
         android:id="@+id/appCompatImageView4"
         android:layout_width="335dp"
         android:layout_height="261dp"
+        android:layout_marginTop="120dp"
         android:src="@drawable/hab1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -26,20 +26,18 @@
         android:layout_height="92dp"
         android:src="@drawable/topo"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="-14dp" />
 
     <androidx.appcompat.widget.AppCompatImageView
 
         android:id="@+id/appCompatImageView11"
-        android:layout_width="169dp"
-        android:layout_height="160dp"
+        android:layout_width="142dp"
+        android:layout_height="130dp"
         android:src="@drawable/logo"
-        app:layout_constraintEnd_toStartOf="@+id/appCompatImageView3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="-51dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-40dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_iniciar"
@@ -61,9 +59,9 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_Bloqueado"
-        android:layout_width="120dp"
+        android:layout_width="132dp"
         android:layout_height="48dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="164dp"
         android:letterSpacing="0.04"
         android:text="@string/text_bloqueado"
         android:textAllCaps="false"
@@ -71,9 +69,20 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/appCompatImageView4"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.932"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appCompatImageView4"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="314dp"
+        android:layout_height="353dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView4"
+        app:srcCompat="@drawable/preumsapo"
         tools:ignore="MissingConstraints" />
 
 
