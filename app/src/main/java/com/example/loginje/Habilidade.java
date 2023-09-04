@@ -9,35 +9,29 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 public class Habilidade extends AppCompatActivity {
 
-    private Button mButtonIniciar;
-    private Button mButtonBloqueado;
+    private AppCompatButton mButtonIniciar;
+    private AppCompatButton mButtonBloqueado;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_video);
+        setContentView(R.layout.activity_habilidade);
 
         mButtonIniciar = findViewById(R.id.button_iniciar);
+        mButtonBloqueado = findViewById(R.id.button_Bloqueado);
 
         mButtonIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                performNextActivity();
-            }
-        });
-        mButtonBloqueado.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Lógica para o clique do botão bloqueado
+            public void onClick(View view) {
+                Intent it = new Intent(Habilidade.this, Video.class);
+                startActivity(it);
             }
         });
 
-    }
-
-    private void performNextActivity() {
     }
 }

@@ -10,22 +10,26 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatTextView;
 
 public class Video extends AppCompatActivity {
 
     private Button mButtonIniciarAtividade;
+    private AppCompatTextView txtAssistir;
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
 
         mButtonIniciarAtividade = findViewById(R.id.button_iniciar_atividade);
-        mButtonIniciarAtividade.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        txtAssistir = findViewById(R.id.textView_assistir);
 
+        txtAssistir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                abrirVideo();
             }
         });
 

@@ -76,11 +76,6 @@ public class Cadastro extends AppCompatActivity {
             // converter data para DateTime
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             Date dataNasc;
-            try {
-                dataNasc = sdf.parse(mDatanasc);
-            } catch (ParseException e) {
-                throw new RuntimeException(e);
-            }
 
             int resultado = 0;
             String ajustada = mDatanasc.substring(6,10) + "-" + mDatanasc.substring(3,5) + "-"
