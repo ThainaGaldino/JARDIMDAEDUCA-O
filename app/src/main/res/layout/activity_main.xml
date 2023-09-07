@@ -34,7 +34,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_layer_gradient"
-        app:layout_constraintStart_toStartOf="@+id/appCompatImageView12"
         tools:layout_editor_absoluteY="-16dp" />
 
     <ScrollView
@@ -49,69 +48,34 @@
             android:layout_height="wrap_content">
 
 
-            <androidx.appcompat.widget.AppCompatEditText
-
-                android:id="@+id/editText_credentials"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/bg_edit_normal"
-                android:hint="@string/text_email_or_username"
-                android:inputType="text"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                app:layout_constraintBottom_toTopOf="@id/editText_password"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/editText_password"
-                android:layout_width="443dp"
-                android:layout_height="58dp"
-                android:layout_marginBottom="36dp"
-                android:background="@drawable/bg_edit_normal"
-                android:hint="@string/text_password"
-                android:imeOptions="actionDone"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
-                android:textColorHint="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/btn_sign_in"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="-14dp" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_sign_in"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/bg_button_normal"
-                android:letterSpacing="0.04"
-                android:text="@string/text_sign_in"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-
-                app:layout_constraintBottom_toTopOf="@+id/btn_forgot_password"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/btn_forgot_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="36dp"
+                android:layout_marginBottom="4dp"
                 android:text="@string/text_forgot_password"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_cadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="36dp"
+                android:text="@string/app_slogan"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -124,6 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-black"
         android:text="@string/text_inicio"
         android:textColor="@color/black"
         android:textSize="24sp"
@@ -135,26 +100,77 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView12"
-        android:layout_width="365dp"
-        android:layout_height="279dp"
+        android:layout_width="348dp"
+        android:layout_height="288dp"
+        android:layout_marginBottom="372dp"
         android:src="@drawable/img"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.372"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="31dp" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/btn_cadastro"
+    <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/app_slogan"
-        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatEditText
+
+        android:id="@+id/editText_credentials"
+        android:layout_width="386dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/bg_edit_normal"
+        android:drawableRight="@drawable/ic_email"
+        android:drawableTint="@color/white"
+        android:hint="@string/text_email_or_username"
+        android:inputType="text"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_password"
+        android:layout_width="387dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_edit_normal"
+        android:drawableRight="@drawable/ic_password"
+        android:drawableTint="@color/white"
+        android:hint="@string/text_password"
+        android:imeOptions="actionDone"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_credentials"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="136dp"
+        android:background="@drawable/bg_button_normal"
+        android:letterSpacing="0.04"
+        android:text="@string/text_sign_in"
+        android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:ignore="MissingConstraints" />
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

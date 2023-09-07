@@ -36,10 +36,11 @@
         android:layout_height="306dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
+        android:fontFamily="@font/averia_serif_libre_bold"
         android:text="@string/text_app"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:textStyle="italic"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_passaro"
@@ -49,6 +50,9 @@
         android:id="@+id/button_entrar"
         android:layout_width="160dp"
         android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="68dp"
         android:background="@drawable/button"
         android:letterSpacing="0.04"
         android:text="@string/text_sign_in"
@@ -56,9 +60,10 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="234dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_inicial"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_cadastrar"
@@ -76,6 +81,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
