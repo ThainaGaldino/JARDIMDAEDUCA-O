@@ -124,7 +124,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\sarah\.gradle\cach
 	tools:targetApi
 		ADDED from C:\TCC\app\src\main\AndroidManifest.xml:16:9-29
 	android:icon
-		ADDED from C:\TCC\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\TCC\app\src\main\AndroidManifest.xml:12:9-42
 	android:allowBackup
 		ADDED from C:\TCC\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme

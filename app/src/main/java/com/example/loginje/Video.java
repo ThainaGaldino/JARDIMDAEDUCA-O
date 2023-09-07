@@ -55,4 +55,16 @@ public class Video extends AppCompatActivity {
     private boolean isRequired() {
         return false;
     }
+
+    public String getnome() {
+        return null;
+    }
+
+    public String getId() {
+        return null;
+    }
+
+    public String getlink() {
+        return null;
+    }
 }
