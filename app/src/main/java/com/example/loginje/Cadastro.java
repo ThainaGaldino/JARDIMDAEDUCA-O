@@ -16,7 +16,9 @@ import androidx.appcompat.widget.AppCompatEditText;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Scanner;
 
 
 public class Cadastro extends AppCompatActivity {
@@ -73,35 +75,78 @@ public class Cadastro extends AppCompatActivity {
             String mNome = mEditTextnomealuno.getText().toString();
             String mDatanasc = mEditTextdatadenascimento.getText().toString();
 
-            // converter data para DateTime
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-            Date dataNasc;
 
-            int resultado = 0;
-            String ajustada = mDatanasc.substring(6,10) + "-" + mDatanasc.substring(3,5) + "-"
-                    + mDatanasc.substring(0,2);
-            resultado = UserDao.insertUser(mNome, mEmail, mSenha, ajustada, getApplicationContext());
-            if(resultado==1){
-                Intent it = new Intent(Cadastro.this, MainActivity.class);
-                startActivity(it);
+
+
+            class Datanasc {
+                public void main(String[] args) {
+                    Scanner scanner = new Scanner(System.in);
+
+                    System.out.println("Digite sua data de nascimento (formato: dd/mm/aaaa): ");
+                    String Datanasc = scanner.nextLine();
+
+                    // Dividir a string em dia, mês e ano
+                    String[] partes = Datanasc.split("/");
+
+                    if (partes.length == 3) {
+                        int dia = Integer.parseInt(partes[0]);
+                        int mes = Integer.parseInt(partes[1]);
+                        int ano = Integer.parseInt(partes[2]);
+
+                        // Validar a data (isso é um exemplo simples, você pode adicionar mais validações)
+                        if (validarData(dia, mes, ano)) {
+                            System.out.println("Data de nascimento válida: " + Datanasc);
+                        } else {
+                            System.out.println("Data de nascimento inválida.");
+                        }
+                    } else {
+                        System.out.println("Formato da data de nascimento inválido.");
+                    }
+
+                    scanner.close();
+                }
+
+                // Função para validar a data
+                public boolean validarData(int dia, int mes, int ano) {
+                    // Adicione suas regras de validação aqui
+                    // Por exemplo, verifique se o ano é válido, se o mês está entre 1 e 12, etc.
+                    // Este é apenas um exemplo simples.
+
+                    return ano >= 1900 && ano <= 2023 && mes >= 1 && mes <= 12 && dia >= 1 && dia <= 31;
+                }
             }
+            Intent it = new Intent(Cadastro.this, MainActivity.class);
+            startActivity(it);
         }
     }
-
-    public class EditTextAction implements TextView.OnEditorActionListener {
-        @Override
-        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-
-            if (actionId == EditorInfo.IME_ACTION_DONE) {
-                performNextActivity();
-            }
+}
 
 
-            return false;
-        }
+
+//            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+//            Date dataNasc;
+//
+//            int resultado = 0;
+//            String ajustada = mDatanasc.substring(6,10) + "-" + mDatanasc.substring(3,5) + "-"
+//                    + mDatanasc.substring(0,2);
+//            resultado = UserDao.insertUser(mNome, mEmail, mSenha, ajustada, getApplicationContext());
+//            if(resultado==1){
 
 
-    }
+//    public class EditTextAction implements TextView.OnEditorActionListener {
+//        @Override
+//        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+
+//            if (actionId == EditorInfo.IME_ACTION_DONE) {
+//                performNextActivity();
+//            }
+
+
+//            return false;
+//        }
+//
+//
+//    }
 
 //    private ChipGroup mChipGroupOption;
 //    private Chip mChip0, mChip1, mChip2;
@@ -230,4 +275,3 @@ public class Cadastro extends AppCompatActivity {
 //    }
 
 
-}

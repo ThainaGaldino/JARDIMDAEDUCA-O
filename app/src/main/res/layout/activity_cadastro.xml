@@ -13,13 +13,12 @@
         android:layout_width="269dp"
         android:layout_height="218dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="82dp"
         android:src="@drawable/panda_cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_concluir"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="481dp" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editText_data_de_nascimento"
@@ -170,10 +169,6 @@
         android:id="@+id/button_concluir"
         android:layout_width="160dp"
         android:layout_height="48dp"
-        android:layout_marginStart="211dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="255dp"
         android:background="@drawable/bg_button_normal"
         android:letterSpacing="0.04"
         android:text="@string/text_conclude"
@@ -181,13 +176,9 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_senha"
-        tools:ignore="MissingConstraints" />
-
-
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="235dp"
+        tools:layout_editor_absoluteY="49dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

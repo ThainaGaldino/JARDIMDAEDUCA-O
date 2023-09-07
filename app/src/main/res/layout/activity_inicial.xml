@@ -40,7 +40,6 @@
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/button_entrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_passaro"
@@ -50,9 +49,6 @@
         android:id="@+id/button_entrar"
         android:layout_width="160dp"
         android:layout_height="48dp"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="126dp"
         android:background="@drawable/button"
         android:letterSpacing="0.04"
         android:text="@string/text_sign_in"
@@ -60,10 +56,9 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_inicial"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="234dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_cadastrar"
