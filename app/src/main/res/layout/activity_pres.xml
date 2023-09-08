@@ -12,8 +12,7 @@
         android:id="@+id/button_pre1"
         android:layout_width="376dp"
         android:layout_height="49dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/bg_button_normal"
         android:letterSpacing="0.04"
         android:text="@string/app_welcomeee"
@@ -21,10 +20,9 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/appCompatImageView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView9"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="17dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_pre2"
@@ -68,15 +66,11 @@
         android:id="@+id/appCompatImageView6"
         android:layout_width="379dp"
         android:layout_height="169dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="132dp"
         android:src="@drawable/img_1"
-        app:layout_constraintBottom_toTopOf="@+id/button_pre1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.437"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="13dp" />
 
     <androidx.appcompat.widget.AppCompatImageView
 
@@ -120,6 +114,7 @@
 
     <androidx.appcompat.widget.AppCompatImageView
 
+        android:id="@+id/appCompatImageView10"
         android:layout_width="171dp"
         android:layout_height="59dp"
         android:layout_marginStart="8dp"
@@ -128,11 +123,11 @@
         app:layout_constraintEnd_toEndOf="@+id/appCompatImageView7"
         app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_pre1"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatImageView
 
+        android:id="@+id/appCompatImageView15"
         android:layout_width="171dp"
         android:layout_height="59dp"
         android:layout_marginStart="8dp"
@@ -142,26 +137,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_pre2"
         tools:ignore="MissingConstraints" />
+
     <androidx.appcompat.widget.AppCompatImageView
 
         android:id="@+id/appCompatImageView3"
         android:layout_width="412dp"
         android:layout_height="92dp"
         android:src="@drawable/topo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="-14dp" />
+        tools:layout_editor_absoluteY="-27dp" />
+
     <androidx.appcompat.widget.AppCompatImageView
 
         android:id="@+id/appCompatImageView11"
         android:layout_width="142dp"
         android:layout_height="130dp"
+        android:layout_marginBottom="52dp"
         android:src="@drawable/logo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-40dp" />
+        app:layout_constraintBottom_toTopOf="@+id/appCompatImageView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView3"
+        tools:ignore="MissingConstraints" />
 
     <ScrollView
+        android:id="@+id/scrollView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent">

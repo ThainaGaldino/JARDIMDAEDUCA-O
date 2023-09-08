@@ -51,7 +51,7 @@ public class Inicial extends AppCompatActivity {
     public class ClickButtonEntrar implements View.OnClickListener {
         @Override
         public void onClick(View v) {
-            Toast.makeText(v.getContext(), "Inicial", Toast.LENGTH_SHORT).show();
+            Toast.makeText(v.getContext(), "FAÇA SEU LOGIN", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(Inicial.this, MainActivity.class));
         }
     }

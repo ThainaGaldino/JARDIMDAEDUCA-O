@@ -8,50 +8,61 @@
     tools:context=".Video">
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView16"
         android:layout_width="186dp"
         android:layout_height="183dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginEnd="113dp"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@+id/appCompatImageView13"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="102dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView13"
         android:layout_width="397dp"
         android:layout_height="333dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="188dp"
         android:src="@drawable/margem"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="292dp" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView_assistir"
-        android:layout_width="290dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="88dp"
-        android:text="@string/text_assistir"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="italic|bold"
-        app:layout_constraintStart_toStartOf="@+id/appCompatImageView13"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="322dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/appCompatImageView14"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView16"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView14"
         android:layout_width="291dp"
         android:layout_height="291dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
         android:src="@drawable/video_corpo_humano"
-        app:layout_constraintStart_toStartOf="@+id/appCompatImageView13"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="334dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView_assistir"
+        android:layout_width="290dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="260dp"
+        android:text="@string/text_assistir"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_iniciaratividade"
-        android:layout_width="160dp"
-        android:layout_height="48dp"
+        android:layout_width="181dp"
+        android:layout_height="54dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="4dp"
         android:background="@drawable/bg_button_normal"

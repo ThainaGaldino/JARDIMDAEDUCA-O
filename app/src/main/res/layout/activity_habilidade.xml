@@ -41,9 +41,9 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_iniciar"
-        android:layout_width="109dp"
+        android:layout_width="120dp"
         android:layout_height="48dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/bg_button_normal"
         android:letterSpacing="0.04"
         android:text="@string/text_button"
@@ -52,24 +52,24 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/appCompatImageView4"
-        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appCompatImageView4"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_Bloqueado"
-        android:layout_width="132dp"
+        android:layout_width="128dp"
         android:layout_height="48dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="172dp"
         android:letterSpacing="0.04"
         android:text="@string/text_bloqueado"
         android:textAllCaps="false"
-        android:textColor="@color/red"
-        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/appCompatImageView4"
-        app:layout_constraintHorizontal_bias="0.932"
+        app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appCompatImageView4"
         tools:ignore="MissingConstraints" />

@@ -48,7 +48,7 @@ public class Pres extends AppCompatActivity {
     // Método responsável por iniciar ou executar a próxima atividade (activity) no fluxo de um aplicativo Android.
     private void performNextActivity (){
         if (isRequired()){
-            Toast.makeText(this,"Mandatory information", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Seja bem-vindo", Toast.LENGTH_SHORT).show();
             return;
         }
         Toast.makeText(this,"Habilidade",Toast.LENGTH_SHORT).show();
