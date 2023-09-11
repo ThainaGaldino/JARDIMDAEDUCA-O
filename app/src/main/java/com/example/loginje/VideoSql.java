@@ -6,6 +6,14 @@ public class VideoSql {
     private final String mNome;
     private final String mLink;
 
+    public String getmNome() {
+        return mNome;
+    }
+
+    public String getmLink() {
+        return mLink;
+    }
+
     //COLUNAS = MEMBROS
 
     public VideoSql( String mNome,String mLink) {

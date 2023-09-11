@@ -17,11 +17,16 @@ public class Video extends AppCompatActivity {
     private Button mButtonIniciarAtividade;
     private AppCompatTextView txtAssistir;
 
+    String videoEscolhido = "";
+
     @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
+
+        Intent it = getIntent();
+        videoEscolhido = it.getStringExtra("videoEscolhido");
 
         mButtonIniciarAtividade = findViewById(R.id.button_iniciar_atividade);
         txtAssistir = findViewById(R.id.textView_assistir);
@@ -29,14 +34,18 @@ public class Video extends AppCompatActivity {
         txtAssistir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                abrirVideo();
+                abrirVideo(videoEscolhido);
             }
         });
 
     }
 
-    private void abrirVideo() {
-        Uri uri = Uri.parse("https://youtu.be/qelEiERtEUY");
+    private void abrirVideo(String videoEscolhido) {
+
+        // TODO - trazer vídeo escolhido do banco de dados
+        VideoSql videoSql = VideoDao.listOneVideo(getApplicationContext(), videoEscolhido);
+
+        Uri uri = Uri.parse(videoSql.getmLink());
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }

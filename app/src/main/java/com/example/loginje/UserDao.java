@@ -143,20 +143,20 @@ public class UserDao {
     }
 
 
-    public static String authenticateUser(User mUser, Context mContext) {
-        String mResponse = "";
-        String mSql = "SELECT id, senha, email, nome , datanasc, statusUsuario FROM Aluno WHERE senha lIKE ? AND email LIKE ? AND nome LIKE ? AND datanas LIKE ? ";
+    public static int authenticateUser(User mUser, Context mContext) {
+        int mResponse = 0;
+        String mSql = "SELECT id, senha, email, nome , datanasc, statusUsuario FROM Aluno WHERE senha lIKE '%?%' AND email LIKE '%?%'";
 
         try {
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
-            mPreparedStatement.setString(1, mUser.getpassword());
-            mPreparedStatement.setString(2, mUser.getemail());
-            mPreparedStatement.setString(3, mUser.getnome());
-            mPreparedStatement.setString(4, mUser.getdatanasc());
-            ResultSet mResultSet = mPreparedStatement.executeQuery();
+            mPreparedStatement.setString(1, mUser.getpassword().toString());
+            mPreparedStatement.setString(2, mUser.getemail().toString());
 
+            boolean sucesso = mPreparedStatement.execute();
+            if(sucesso)
+                mResponse = 1;
         } catch (Exception e) {
-            mResponse = "Exception";
+
             Log.e(TAG, e.getMessage());
             e.printStackTrace();
         }

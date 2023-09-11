@@ -3,8 +3,8 @@ package com.example.loginje;
 public class User {
 
     public static final String TAG = "Aluno";
-    private final String mNome;
-    private final String mDatanasc;
+    private String mNome;
+    private String mDatanasc;
 
     //COLUNAS = MEMBROS
 
@@ -40,6 +40,10 @@ public class User {
         this.mDatanasc = mDatanasc;
         this.mPassword = mPassword;
         this.mEmail = mEmail;
+    }
+
+    public User() {
+
     }
 
     @Override

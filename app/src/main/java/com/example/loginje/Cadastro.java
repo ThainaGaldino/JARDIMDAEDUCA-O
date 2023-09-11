@@ -26,6 +26,9 @@ public class Cadastro extends AppCompatActivity {
     private TextView mTextViewserie, mTextViewcadastro;
     private AppCompatEditText mEditTextdatadenascimento, mEditTextemaildoresponsavel, mEditTextnomealuno, mEditTextsenha;
     private Button mButtonconcluir;
+    String mMessage = "";
+    int resultado = 0;
+    String ajustada = "";
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -76,61 +79,49 @@ public class Cadastro extends AppCompatActivity {
             String mDatanasc = mEditTextdatadenascimento.getText().toString();
 
 
+            String[] partes = mDatanasc.split("/");
 
+            if (partes.length == 3) {
+                int dia = Integer.parseInt(partes[0]);
+                int mes = Integer.parseInt(partes[1]);
+                int ano = Integer.parseInt(partes[2]);
 
-            class Datanasc {
-                public void main(String[] args) {
-                    Scanner scanner = new Scanner(System.in);
+                // Validar a data (isso é um exemplo simples, você pode adicionar mais validações)
 
-                    System.out.println("Digite sua data de nascimento (formato: dd/mm/aaaa): ");
-                    String Datanasc = scanner.nextLine();
-
-                    // Dividir a string em dia, mês e ano
-                    String[] partes = Datanasc.split("/");
-
-                    if (partes.length == 3) {
-                        int dia = Integer.parseInt(partes[0]);
-                        int mes = Integer.parseInt(partes[1]);
-                        int ano = Integer.parseInt(partes[2]);
-
-                        // Validar a data (isso é um exemplo simples, você pode adicionar mais validações)
-                        if (validarData(dia, mes, ano)) {
-                            System.out.println("Data de nascimento válida: " + Datanasc);
-                        } else {
-                            System.out.println("Data de nascimento inválida.");
-                        }
-                    } else {
-                        System.out.println("Formato da data de nascimento inválido.");
+                if (validarData(dia, mes, ano)) {
+                    mMessage = "Data de nascimento válida: " + mDatanasc;
+                    Toast.makeText(getApplicationContext(), mMessage, Toast.LENGTH_SHORT).show();
+                    ajustada = mDatanasc.substring(6,10) + "-" + mDatanasc.substring(3,5) + "-"
+                            + mDatanasc.substring(0,2);
+                    resultado = UserDao.insertUser(mNome, mEmail, mSenha, ajustada, getApplicationContext());
+                    if(resultado==1) {
+                        Intent it = new Intent(Cadastro.this, MainActivity.class);
+                        startActivity(it);
                     }
-
-                    scanner.close();
+                } else {
+                    mMessage = "Data de nascimento inválida.";
+                    Toast.makeText(getApplicationContext(), mMessage, Toast.LENGTH_SHORT).show();
                 }
-
-                // Função para validar a data
-                public boolean validarData(int dia, int mes, int ano) {
-                    // Adicione suas regras de validação aqui
-                    // Por exemplo, verifique se o ano é válido, se o mês está entre 1 e 12, etc.
-                    // Este é apenas um exemplo simples.
-
-                    return ano >= 1900 && ano <= 2023 && mes >= 1 && mes <= 12 && dia >= 1 && dia <= 31;
-                }
+            } else {
+                mMessage = "Formato da data de nascimento inválido.";
+                Toast.makeText(getApplicationContext(), mMessage, Toast.LENGTH_SHORT).show();
             }
-            Intent it = new Intent(Cadastro.this, MainActivity.class);
-            startActivity(it);
+        }
+
+        public boolean validarData(int dia, int mes, int ano) {
+            // Adicione suas regras de validação aqui
+            // Por exemplo, verifique se o ano é válido, se o mês está entre 1 e 12, etc.
+            // Este é apenas um exemplo simples.
+
+            return ano >= 1900 && ano <= 2023 && mes >= 1 && mes <= 12 && dia >= 1 && dia <= 31;
         }
     }
 }
 
 
-
 //            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 //            Date dataNasc;
 //
-//            int resultado = 0;
-//            String ajustada = mDatanasc.substring(6,10) + "-" + mDatanasc.substring(3,5) + "-"
-//                    + mDatanasc.substring(0,2);
-//            resultado = UserDao.insertUser(mNome, mEmail, mSenha, ajustada, getApplicationContext());
-//            if(resultado==1){
 
 
 //    public class EditTextAction implements TextView.OnEditorActionListener {
@@ -161,7 +152,7 @@ public class Cadastro extends AppCompatActivity {
 //        finish();
 //    }
 
-    // ouvinte do clique para cancelar
+// ouvinte do clique para cancelar
 //    public class ClickMyCancel implements View
 //
 //            .OnClickListener {
@@ -181,7 +172,7 @@ public class Cadastro extends AppCompatActivity {
 //        }
 
 
-        //        if(vChipValue == 0){
+//        if(vChipValue == 0){
 //            return  true;
 //        } else {
 //            return false;
@@ -203,8 +194,8 @@ public class Cadastro extends AppCompatActivity {
 //        return false;
 //    }
 //
-    // funcionalidade para retornar com os dados
-    // para a atividade anterior INSERT/UPDATE  modo ADD/EDIT
+// funcionalidade para retornar com os dados
+// para a atividade anterior INSERT/UPDATE  modo ADD/EDIT
 //    private void saveCadastro() {
 //        if (isInputInvalid()) {
 //            mMessage = "Nome do Aluno, E-mail do responsavel e  Data de nascimento - sao obrigatorios";

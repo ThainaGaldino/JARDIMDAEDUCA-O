@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText mEditextCredentials , mEdittextPassword ;
+    private EditText mEditextCredentials, mEdittextPassword;
     private TextView mButtonSignUp, mButtonCadastro;
     private Button mButtonSignIn;
 
@@ -28,25 +28,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mEditextCredentials = findViewById(R.id.editText_credentials) ;
+        mEditextCredentials = findViewById(R.id.editText_credentials);
         mEdittextPassword = findViewById(R.id.editText_password);
         mEdittextPassword.setOnEditorActionListener(new EditTextAction());
         mButtonSignIn = findViewById(R.id.btn_sign_in);
-        mButtonSignIn.setOnClickListener(new ClickButtonSiggnIn());
+        mButtonSignIn.setOnClickListener(new ClickButtonSignIn());
 
         mButtonSignUp = findViewById(R.id.btn_forgot_password);
-        mButtonSignUp.setOnClickListener(new ClickButtonSiggnUp());
+        mButtonSignUp.setOnClickListener(new ClickButtonSignUp());
 
-        mButtonCadastro =findViewById(R.id.btn_cadastro);
+        mButtonCadastro = findViewById(R.id.btn_cadastro);
         mButtonCadastro.setOnClickListener(new ClickButtonCadastrar());
 
 
     }
 
 
-    private boolean isRequired(){
+    private boolean isRequired() {
         if (TextUtils.isEmpty(mEditextCredentials.getText()) ||
-        TextUtils.isEmpty(mEdittextPassword.getText())) {
+                TextUtils.isEmpty(mEdittextPassword.getText())) {
             return true;
 
         } else {
@@ -55,62 +55,74 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void performNextActivity (){
-        if (isRequired()){
-            Toast.makeText(this,"Login", Toast.LENGTH_SHORT).show();
+    private void performNextActivity() {
+        if (isRequired()) {
+            Toast.makeText(this, "Faça seu login", Toast.LENGTH_SHORT).show();
             return;
         }
-        Toast.makeText(this,"SEJA BEM - VINDO",Toast.LENGTH_SHORT).show();
+        User user = new User();
+        user.setmEmail(mEditextCredentials.getText().toString());
+        user.setmPassword(mEdittextPassword.getText().toString());
+        int resultado = UserDao.authenticateUser(user, getApplicationContext());
+        if (resultado == 1) {
+            Toast.makeText(this, "SEJA BEM - VINDO", Toast.LENGTH_SHORT).show();
 
-     //trocar de janela (tela de pres) //
-        Intent it= new Intent(MainActivity.this , Pres.class);
-        startActivity(it);
+            //trocar de janela (tela de pres) //
+            Intent it = new Intent(MainActivity.this, Pres.class);
+            startActivity(it);
+        }else{
+            Toast.makeText(this, "E-MAIL OU SENHA INVÁLIDOS", Toast.LENGTH_SHORT).show();
+
+        }
+
+
     }
-    private void performNextActivity2 (){
 
-        Toast.makeText(this,"Redefinir senha",Toast.LENGTH_SHORT).show();
+    private void performNextActivity2() {
+
+        Toast.makeText(this, "Redefinir senha", Toast.LENGTH_SHORT).show();
 
         //trocar de janela (tela de pres) //
-        Intent it= new Intent(MainActivity.this , RedefinirActivity.class);
+        Intent it = new Intent(MainActivity.this, RedefinirActivity.class);
         startActivity(it);
 
     }
-    public class ClickButtonSiggnIn implements View
-    .OnClickListener{
+
+    public class ClickButtonSignIn implements View
+            .OnClickListener {
         @Override
         public void onClick(View view) {
             performNextActivity();
         }
     }
-    public class ClickButtonSiggnUp implements View
-            .OnClickListener{
+
+    public class ClickButtonSignUp implements View
+            .OnClickListener {
         @Override
         public void onClick(View view) {
             performNextActivity2();
         }
     }
 
-   public class EditTextAction implements TextView.OnEditorActionListener{
-       @Override
-       public boolean onEditorAction(TextView textView, int actionID, KeyEvent keyEvent) {
+    public class EditTextAction implements TextView.OnEditorActionListener {
+        @Override
+        public boolean onEditorAction(TextView textView, int actionID, KeyEvent keyEvent) {
 
-           if(actionID == EditorInfo.IME_ACTION_DONE){
-               performNextActivity();
-           }
-
-
-           return false;
-       }
-   }
+            if (actionID == EditorInfo.IME_ACTION_DONE) {
+                performNextActivity();
+            }
 
 
+            return false;
+        }
+    }
 
 
     public class ClickButtonCadastrar implements View.OnClickListener {
         @Override
         public void onClick(View view) {
             //trocar de janela (tela de cadastro) //
-            Intent it= new Intent(MainActivity.this, Cadastro.class);
+            Intent it = new Intent(MainActivity.this, Cadastro.class);
             startActivity(it);
         }
     }

@@ -29,6 +29,7 @@ public class Habilidade extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(Habilidade.this, Video.class);
+                it.putExtra("videoEscolhido", "CONHECENDO O CORPO HUMANO");
                 startActivity(it);
             }
         });

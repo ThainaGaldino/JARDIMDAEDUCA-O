@@ -15,7 +15,7 @@ public class VideoDao {
 
 
     public static final String TAG = "CRUD Video";
-    private static ArrayList<Video> mVideoList;
+    private static ArrayList<VideoSql> mVideoList;
 
     public static <mContext> int insertUser(String nome, String link) {
 
@@ -114,35 +114,56 @@ public class VideoDao {
         return vResponse;
     }
 
-//    public static List<Video> listAllVideo(Context mContext) {
-//        List<Video> mVideoList = null;
-//        String mSql;
-//        try {
-//            mSql = "SELECT id, nome, link FROM Video ORDER BY nome ASC";
-//            PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
-//            ResultSet mResultSet = mPreparedStatement.executeQuery();
-//            mVideoList = new ArrayList<Video>();
-//            while (mResultSet.next()) {
-//                mVideoList.add(new Video(mResultSet.getString(1),
-//                        mResultSet.getInt(2),
-//                ));
-//            }
-//
-//        } catch (SQLException e) {
-//            Log.e(TAG, e.getMessage());
-//        }
-//        return mVideoList;
-//    }
+    public static List<VideoSql> listAllVideo(Context mContext) {
+        List<VideoSql> mVideoList = null;
+        String mSql;
+        try {
+            mSql = "SELECT id, nome, link FROM Video ORDER BY nome ASC";
+            PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
+            ResultSet mResultSet = mPreparedStatement.executeQuery();
+            mVideoList = new ArrayList<VideoSql>();
+            while (mResultSet.next()) {
+                mVideoList.add(new VideoSql(
+                        mResultSet.getString(1),
+                        mResultSet.getString(2)
+                ));
+            }
 
+        } catch (SQLException e) {
+            Log.e(TAG, e.getMessage());
+        }
+        return mVideoList;
+    }
 
-    public static String authenticateUser(Video mVideo, Context mContext) {
+    public static VideoSql listOneVideo(Context mContext, String videoEscolhido) {
+        VideoSql mVideo = null;
+        String mSql;
+        try {
+            mSql = "SELECT nome_video, link_video FROM Video where nome_video like '%" + videoEscolhido + "%' ORDER BY nome_video ASC";
+            PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
+            ResultSet mResultSet = mPreparedStatement.executeQuery();
+
+            while (mResultSet.next()) {
+               mVideo = new VideoSql(
+                        mResultSet.getString(1),
+                        mResultSet.getString(2)
+                );
+            }
+
+        } catch (SQLException e) {
+            Log.e(TAG, e.getMessage());
+        }
+        return mVideo;
+    }
+
+    public static String authenticateUser(VideoSql mVideo, Context mContext) {
         String mResponse = "";
         String mSql = "SELECT id, nome ,link FROM Video WHERE nome lIKE ? AND link LIKE ? ";
 
         try {
             PreparedStatement mPreparedStatement = MSSQLConnectionHelper.getConnection(mContext).prepareStatement(mSql);
             mPreparedStatement.setString(3, mVideo.getnome());
-            mPreparedStatement.setString(4, mVideo.getlink());
+            mPreparedStatement.setString(4, mVideo.getmLink());
             ResultSet mResultSet = mPreparedStatement.executeQuery();
 
         } catch (Exception e) {
