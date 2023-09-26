@@ -29,7 +29,7 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/logotipo"
+        android:icon="@drawable/logo_app"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:testOnly="true"
@@ -46,6 +46,8 @@
         <activity android:name="com.example.loginje.Habilidadeumpredois" />
         <activity android:name="com.example.loginje.Habilidadeumpretres" />
         <activity android:name="com.example.loginje.Video" />
+        <activity android:name="com.example.loginje.Videoumpredois" />
+        <activity android:name="com.example.loginje.Videoumpretres" />
         <activity android:name="com.example.loginje.Corpohumano" />
         <activity
             android:name="com.example.loginje.Inicial"

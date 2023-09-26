@@ -90,7 +90,8 @@
         android:layout_marginTop="28dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/text_inicio"
-        android:textColor="@color/black"
+        android:textColor="@color/dark_purple"
+        android:textStyle="italic|bold"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.458"
@@ -100,13 +101,13 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView12"
-        android:layout_width="348dp"
-        android:layout_height="288dp"
-        android:layout_marginBottom="372dp"
+        android:layout_width="396dp"
+        android:layout_height="384dp"
+        android:layout_marginBottom="376dp"
         android:src="@drawable/img"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="31dp" />
+        tools:layout_editor_absoluteX="17dp" />
 
     <ScrollView
         android:id="@+id/scrollView3"
@@ -139,6 +140,7 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editText_password"
+        android:inputType="textPassword"
         android:layout_width="387dp"
         android:layout_height="52dp"
         android:layout_marginTop="20dp"

@@ -51,8 +51,8 @@ public class MSSQLConnectionHelper {
                     ";password=" + mStringpassword + ";";
 
 
-            mConnection = DriverManager.getConnection(mStringConnectionUrl);
-           // mConnection = DriverManager.getConnection("jdbc:jtds:sqlserver://JardimEduc.mssql.somee.com;database=bd_jardimdaeducacao;user=jardim;password=12345678;");
+            //mConnection = DriverManager.getConnection(mStringConnectionUrl);
+           mConnection = DriverManager.getConnection("jdbc:jtds:sqlserver://JardimEduc.mssql.somee.com;database=JardimEduc;user=jardim;password=12345678;");
 
             Log.i(TAG, "Connection Successful");
         } catch (ClassNotFoundException e) {

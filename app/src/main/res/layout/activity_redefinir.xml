@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView17"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/green"
         android:src="@drawable/green"
-        app:layout_constraintBottom_toBottomOf="parent"
 
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:layout_width="match_parent"
@@ -34,56 +35,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
-
-            <androidx.appcompat.widget.AppCompatEditText
-
-                android:id="@+id/editText_credentials"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginEnd="18dp"
-                android:layout_marginBottom="36dp"
-                android:background="@drawable/bg_edit_normal"
-                android:hint="@string/App_senhaNova"
-                android:inputType="text"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                app:layout_constraintBottom_toTopOf="@id/editText_password" />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/editText_password"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginEnd="18dp"
-                android:layout_marginBottom="36dp"
-                android:background="@drawable/bg_edit_normal"
-                android:hint="@string/App_confirmarsenhaNova"
-                android:imeOptions="actionDone"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
-                android:textColorHint="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/btn_sign_in" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_sign_in"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="18dp"
-                android:layout_marginEnd="18dp"
-                android:background="@drawable/bg_button_normal"
-                android:letterSpacing="0.04"
-                android:text="@string/App_confirmar"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/btn_forgot_password"
-
-                />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/btn_forgot_password"
@@ -105,24 +56,79 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/app_redefinir"
-        android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textColor="@color/dark_purple"
+        android:textSize="29sp"
+        android:textStyle="italic|bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="355dp"
-        android:layout_height="276dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="396dp"
+        android:layout_height="384dp"
+        android:layout_marginBottom="376dp"
         android:src="@drawable/img"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+
+        android:id="@+id/editText_credentials"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/bg_edit_normal"
+        android:drawableRight="@drawable/ic_password"
+        android:drawableTint="@color/white"
+        android:hint="@string/App_senhaNova"
+        android:inputType="textPassword"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/editText_password"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editText_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/bg_edit_normal"
+        android:drawableRight="@drawable/ic_password"
+        android:drawableTint="@color/white"
+        android:hint="@string/App_confirmarsenhaNova"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sign_in"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="88dp"
+        android:background="@drawable/bg_button_normal"
+        android:letterSpacing="0.04"
+        android:text="@string/App_confirmar"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView17"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

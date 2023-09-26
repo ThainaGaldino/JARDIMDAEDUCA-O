@@ -1,69 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Habilidadeumpretres">
 
     <androidx.appcompat.widget.AppCompatImageView
 
-        android:id="@+id/appCompatImageView4"
-        android:layout_width="427dp"
-        android:layout_height="418dp"
+        android:id="@+id/appCompatImageView3"
+        android:layout_width="412dp"
+        android:layout_height="92dp"
         android:src="@drawable/topo"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-8dp"
-        tools:layout_editor_absoluteY="-176dp" />
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="-4dp" />
+
 
     <androidx.appcompat.widget.AppCompatImageView
 
-        android:layout_width="186dp"
-        android:layout_height="183dp"
+        android:id="@+id/appCompatImageView11"
+        android:layout_width="142dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="252dp"
         android:src="@drawable/logo"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-56dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/appCompatImageView5"
         android:layout_width="380dp"
         android:layout_height="321dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="16dp"
         android:src="@drawable/hab1pre3"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView3"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatImageView
 
-        android:layout_width="474dp"
-        android:layout_height="291dp"
-        android:src="@drawable/lama"
-        tools:layout_editor_absoluteX="-8dp"
-        tools:layout_editor_absoluteY="580dp"
-        tools:ignore="MissingConstraints" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-
+        android:id="@+id/appCompatImageView20"
         android:layout_width="411dp"
         android:layout_height="233dp"
+        android:layout_marginStart="80dp"
         android:src="@drawable/porco"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="491dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatImageView
 
+        android:id="@+id/appCompatImageView21"
         android:layout_width="219dp"
         android:layout_height="293dp"
+        android:layout_marginBottom="140dp"
         android:src="@drawable/habilidade1pre3"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="287dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_iniciarpre3"
-        android:layout_width="109dp"
-        android:layout_height="48dp"
+        android:layout_width="110dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/bg_button_normal"
         android:letterSpacing="0.04"
         android:text="@string/text_button"
@@ -71,14 +81,15 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="204dp" />
+        app:layout_constraintBottom_toTopOf="@+id/button_bloqueado3"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_bloque"
-        android:layout_width="90dp"
+        android:id="@+id/button_bloqueado3"
+        android:layout_width="115dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="84dp"
         android:background="@drawable/bg_bloqueado"
         android:letterSpacing="0.04"
         android:text="@string/text_bloqueado"
@@ -86,9 +97,11 @@
         android:textColor="@color/red"
         android:textSize="13sp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="274dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView5"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView5"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

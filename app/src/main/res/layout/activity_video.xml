@@ -51,7 +51,7 @@
         android:layout_marginBottom="260dp"
         android:text="@string/text_assistir"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="italic|bold"
         app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView14"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +60,7 @@
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button_iniciaratividade"
+        android:id="@+id/ButtonIniciarAtividade"
         android:layout_width="181dp"
         android:layout_height="54dp"
         android:layout_marginTop="64dp"

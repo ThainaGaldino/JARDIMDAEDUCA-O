@@ -9,7 +9,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/logotipo"
+        android:icon="@drawable/logo_app"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginJE"
@@ -27,6 +27,8 @@
         <activity android:name=".Habilidadeumpredois"></activity>
         <activity android:name=".Habilidadeumpretres"></activity>
         <activity android:name=".Video"></activity>
+        <activity android:name=".Videoumpredois"></activity>
+        <activity android:name=".Videoumpretres"></activity>
         <activity android:name=".Corpohumano"></activity>
 
         <activity android:name=".Inicial"

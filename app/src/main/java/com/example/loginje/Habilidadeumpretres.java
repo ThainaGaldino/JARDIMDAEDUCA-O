@@ -1,40 +1,38 @@
 package com.example.loginje;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
-public class Habilidadeumpretres  extends AppCompatActivity {
+public class Habilidadeumpretres extends AppCompatActivity {
 
-    private Button mButtoniniciarpre3, mButtonbloque;
+    private AppCompatButton mButtonIniciarpre3;
+    private AppCompatButton mButtonBloqueado3;
 
-    //responsável por iniciar ou executar a próxima atividade (activity) no fluxo de um aplicativo Android.
-    private void performNextActivity() {
-        {
-            Toast.makeText(this, "Habilidade um pre um", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(Habilidadeumpretres.this, Pres.class));
-        }
+    @SuppressLint("MissingInflatedId")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_habilidadeumpretres);
+
+        mButtonIniciarpre3 = findViewById(R.id.button_iniciarpre3);
+        mButtonBloqueado3 = findViewById(R.id.button_bloqueado3);
+
+        mButtonIniciarpre3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(Habilidadeumpretres.this, Videoumpretres.class);
+                it.putExtra("videoEscolhido", "");
+                startActivity(it);
+            }
+        });
+
     }
-
-    class ClickButtonIiniciarpre3 implements View.OnClickListener {
-        @Override
-        public void onClick(View v) {
-
-        }
-    }
-    class ClickButtonBloque implements View.OnClickListener {
-        @Override
-        public void onClick(View v) {
-
-        }
-    }
-
-
-
-
-
-
 }
