@@ -49,6 +49,7 @@
         <activity android:name="com.example.loginje.Videoumpredois" />
         <activity android:name="com.example.loginje.Videoumpretres" />
         <activity android:name="com.example.loginje.Corpohumano" />
+        <activity android:name="com.example.loginje.Numero" />
         <activity
             android:name="com.example.loginje.Inicial"
             android:exported="true"

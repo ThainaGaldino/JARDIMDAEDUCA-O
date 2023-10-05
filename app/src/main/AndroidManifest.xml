@@ -30,6 +30,7 @@
         <activity android:name=".Videoumpredois"></activity>
         <activity android:name=".Videoumpretres"></activity>
         <activity android:name=".Corpohumano"></activity>
+        <activity android:name=".Numero"></activity>
 
         <activity android:name=".Inicial"
             android:exported="true"

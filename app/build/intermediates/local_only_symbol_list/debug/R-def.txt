@@ -55,6 +55,7 @@ drawable macaco
 drawable macacopresss
 drawable margem
 drawable mato
+drawable numero
 drawable panda_cadastro
 drawable passaro
 drawable percepcaovisual
@@ -104,6 +105,7 @@ id button_bloqueado2
 id button_bloqueado3
 id button_cadastrar
 id button_concluir
+id button_confirmar
 id button_entrar
 id button_iniciar
 id button_iniciar_atividade
@@ -117,6 +119,7 @@ id editText_credentials
 id editText_data_de_nascimento
 id editText_email_do_responsavel
 id editText_nome_aluno
+id editText_numero
 id editText_password
 id editText_senha
 id imageView2
@@ -130,7 +133,9 @@ id textView
 id textView_assistir
 id textView_cadastro
 id textView_clique
+id textView_coloque
 id textView_inicial
+id textView_pdf
 id view
 layout activity_atividade
 layout activity_cadastro
@@ -139,6 +144,7 @@ layout activity_habilidadeumpredois
 layout activity_habilidadeumpretres
 layout activity_inicial
 layout activity_main
+layout activity_numero
 layout activity_percepcaovisual
 layout activity_pres
 layout activity_redefinir
@@ -158,6 +164,7 @@ string app_slogan
 string app_welcome
 string app_welcomee
 string app_welcomeee
+string button
 string name_tela
 string text_app
 string text_assistir
@@ -167,12 +174,15 @@ string text_bloqueado
 string text_button
 string text_conclude
 string text_date_of_birth
+string text_email
 string text_email_or_username
 string text_error_fill_mandatory_information
 string text_forgot_password
 string text_inicio
 string text_name_student
+string text_numero
 string text_password
+string text_pdf
 string text_pre1
 string text_register
 string text_responsible_person_email
